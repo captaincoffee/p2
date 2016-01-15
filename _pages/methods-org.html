@@ -1,0 +1,23 @@
+---
+permalink: /methods/
+layout: default
+title: Methods
+collection: methods
+---
+
+  <h1>Methods Page</h1>
+
+{% assign byCategory = site.methods | group_by: 'category' %}
+{% for cat in byCategory %}
+  <h2>{{ cat.name }}</h2>
+  {% assign byType = cat.items | group_by: 'type' %}
+  {% for type in site.types %}
+    {% assign currentType = byType | where:"name", type | first %}
+    <h3>{{ currentType.name | capitalize }}</h3>
+    <ul>
+      {% for item in currentType.items %}
+          <li><a href="{{ item.url }}"><h4>{{ item.title }}</h4></a>{{ item.excerpt }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endfor %}

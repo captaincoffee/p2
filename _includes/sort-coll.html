@@ -1,0 +1,13 @@
+{% assign byCategory = {{page.collection}} | group_by: 'category' | sort: 'name' %}
+{% for cat in byCategory %}
+  <h2>{{ cat.name | capitalize }}</h2>
+  {% assign byType = cat.items | group_by: 'type' %}
+  {% for type in byType %}
+    <h3>{{ type.name | capitalize }}</h3>
+    <ul>
+      {% for item in type.items %}
+        <li>{{ item.title }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endfor %}

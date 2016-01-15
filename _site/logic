@@ -1,0 +1,34 @@
+for page in site.{{collection}}
+
+if {{page.url}} contains {{collection}}
+and category !empty
+
+split url on "/"
+get category
+replace "_" with " "
+Capitalize Category
+
+
+
+replace " " with "" for # target
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+baseurl/collection/category/file
