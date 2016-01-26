@@ -1,8 +1,6 @@
 ---
-layout: collection
 title: Sand Seal
 image_path: ""
-category: Chip &amp; Spray Seals
 type: articles
 ---
 
