@@ -29,6 +29,10 @@ $menu-background: #333;
   }
 }
 
+#main-menu a.current{
+  background: $primary-color;
+}
+
 .menu-text {
   color: #fff;
 

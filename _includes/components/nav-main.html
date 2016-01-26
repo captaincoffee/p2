@@ -10,27 +10,42 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
-      <li><a href="{{site.baseurl}}/news/">News</a></li>
-      {% for collection in site.collections %}
-      {% unless collection.label == 'posts' %}
-        <li><a href="{{site.baseurl}}/{{ collection.label }}">{{ collection.label | capitalize }}</a></li>
-        {% endunless %}
+      <li><a {% if page.url == "/news/" %} class="current"{% endif %} href="{{site.baseurl}}/news/">News</a></li>
+
+      {% comment %} ++++ Knowledge base collections ++++ {% endcomment %}
+      {% for collectionDatas in site.articlesCollections %}
+        {% comment %}This creates a *collection* variable in the global scope{% endcomment %}
+        {% include components/getCollectionFromName.html collectionName=collectionDatas.collection %}
+
+        {% comment %}Only print if we have article in the collection{% endcomment %}
+        {% if collection.docs.size > 0 %}
+            {% assign urlStart = collection.label | append: "/" | prepend: "/" %}
+            <li class="has-submenu">
+              {% comment %}Link to Collection index page{% endcomment %}
+              <a href="{{ site.baseurl }}/{{ collectionDatas.collection }}" {% if page.url == urlStart %}class="current"{% endif %}>{{ collectionDatas.name }}</a>
+              {% comment %}Sort collections articles by category{% endcomment %}
+              {% assign byCategory = collection.docs | group_by: 'category' %}
+              <ul class="submenu menu vertical" data-submenu>
+                {% comment %}Prints categories in the same order as collection.categories{% endcomment %}
+                {% for cat in collection.categories %}
+                  {% assign currentCat = cat.slug %}
+                  {% assign pageUrl = urlStart | append: currentCat | append: "/" %}
+                  {% comment %}Look for docs whith a category{% endcomment %}
+                  {% assign currentCatDocs = byCategory | where: "name", currentCat | first %}
+                  {% if currentCatDocs != nil %}
+                      {% assign categoryDatas = collection.categories | where: 'slug', currentCat | first  %}
+                      <li>
+                      <a {% if page.url == pageUrl %}class="current"{% endif %} href="{{ site.baseurl }}/{{ collection.label }}/{{ categoryDatas.slug }}/">{{ categoryDatas.name }}</a>
+                      </li>
+                  {% endif %}
+              {% endfor %}
+              </ul>
+            </li>
+        {% endif %}
       {% endfor %}
 
-
-                <li class="has-submenu">
-            <a href="#">Collection</a>
-            <ul class="submenu menu vertical" data-submenu>
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li>
-
-
-
-      <li><a href="{{site.baseurl}}/events/">Events</a></li>
-      <li><a href="{{site.baseurl}}/kitchen-sink/">Kitchen Sink</a></li>
+      <li><a{% if page.url == "/events/" %} class="current"{% endif %} href="{{site.baseurl}}/events/">Events</a></li>
+      <li><a{% if page.url == "/kitchen-sink/" %} class="current"{% endif %} href="{{site.baseurl}}/kitchen-sink/">Kitchen Sink</a></li>
     </ul>
   </div>
 </div>
