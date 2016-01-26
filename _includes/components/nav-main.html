@@ -5,7 +5,7 @@
 <div class="top-bar" id="main-menu">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">{{ site.title }}</li>
+      <li class="menu-text"><a href="{{ site.baseurl }}/">{{ site.title }}</a></li>
     </ul>
   </div>
   <div class="top-bar-right">
@@ -56,6 +56,7 @@
 
       <li><a{% if page.url == "/events/" %} class="current"{% endif %} href="{{site.baseurl}}/events/">Events</a></li>
       <li><a{% if page.url == "/kitchen-sink/" %} class="current"{% endif %} href="{{site.baseurl}}/kitchen-sink/">Kitchen Sink</a></li>
+      <li><a{% if page.url == "/doc/" %} class="current"{% endif %} href="{{site.baseurl}}/doc/">Doc</a></li>
     </ul>
   </div>
 </div>
