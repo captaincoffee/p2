@@ -105,7 +105,9 @@ permalink: pretty
 collections:
 
   methods:
-    output: true
+    output: true   # every page in the collection will be created
+    isKB: true     # is part of Knowledge base
+    name: "Methods" # Print name used in titles, menus, ...
     categories:
       - { name: "Fog Seals", slug: "fog-seals" }
       - { name: "Chip Seals", slug: "chip-seals" }
@@ -125,6 +127,8 @@ collections:
 
   materials:
     output: true
+    isKB: true
+    name: Materials
     categories:
       - { name: "Aggregates", slug: "aggregates" }
       - { name: "Asphalt Emulsions", slug: "asphalt-emulsions" }
@@ -147,6 +151,8 @@ collections:
 
   manage:
     output: true
+    isKB: true
+    name: Manage
     categories:
       - { name: "Safety", slug: "safety" }
       - { name: "Policy", slug: "policy" }
@@ -159,12 +165,6 @@ collections:
       - { name: "Life Cycle Cost Analysis", slug: "life-cycle-cost-analysis" }
       - { name: "Data Management", slug: "data-management" }
       - { name: "Training", slug: "training" }
-
-# this is used to differentiate Knowledge base collections from other like *posts* collections in Jekyll 3
-articlesCollections:
-  - { name: "Methods", collection: "methods" }
-  - { name: "Materials", collection: "materials" }
-  - { name: "Manage", collection: "manage" }
 
 # this array determine types order
 # a collection item with non matching type will not be listed
