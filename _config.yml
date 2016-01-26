@@ -109,7 +109,7 @@ collections:
       - { name: "Fog Seals", slug: "fog-seals" }
       - { name: "Chip Seals", slug: "chip-seals" }
       - { name: "Spray Seals", slug: "spray-seals" }
-      - { name: "Microsurfacing & Slurry", slug: "microsurfacing-slurry" }
+      - { name: "Microsurfacing & Slurry", slug: "microsurfacing-and-slurry" }
       - { name: "Combination Seals", slug: "combination-seals" }
       - { name: "Cold-Mix Asphalt", slug: "cold-mix-asphalt" }
       - { name: "Warm-Mix Asphalt", slug: "warm-mix-asphalt" }
@@ -120,6 +120,7 @@ collections:
       - { name: "Concrete Overlays", slug: "concrete-overlays" }
       - { name: "Concrete Treatment", slug: "concrete-treatment" }
       - { name: "Patching & Preparation", slug: "patching-preparation" }
+      - { name: "Milling & Grinding", slug: "milling-and-grinding" }
 
   materials:
     output: true
@@ -189,7 +190,7 @@ defaults:
   - { scope: { path: "methods/fog-seals" }, values:  { category: "fog-seals" } }
   - { scope: { path: "methods/chip-seals" }, values:  { category: "chip-seals" } }
   - { scope: { path: "methods/spray-seals" }, values:  { category: "spray-seals" } }
-  - { scope: { path: "methods/microsurfacing-slurry" }, values:  { category: "microsurfacing-slurry" } }
+  - { scope: { path: "methods/microsurfacing-and-slurry" }, values:  { category: "microsurfacing-and-slurry" } }
   - { scope: { path: "methods/combination-seals" }, values:  { category: "combination-seals" } }
   - { scope: { path: "methods/cold-mix-asphalt" }, values:  { category: "cold-mix-asphalt" } }
   - { scope: { path: "methods/warm-mix-asphalt" }, values:  { category: "warm-mix-asphalt" } }
@@ -200,6 +201,7 @@ defaults:
   - { scope: { path: "methods/concrete-overlays" }, values:  { category: "concrete-overlays" } }
   - { scope: { path: "methods/concrete-treatment" }, values:  { category: "concrete-treatment" } }
   - { scope: { path: "methods/patching-preparation" }, values:  { category: "patching-preparation" } }
+  - { scope: { path: "methods/milling-and-grinding" }, values:  { category: "milling-and-grinding" } }
 
   - { scope: { path: "materials/aggregates" }, values:  { category: "aggregates" } }
   - { scope: { path: "materials/asphalt-emulsions" }, values:  { category: "asphalt-emulsions" } }
