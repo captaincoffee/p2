@@ -44,7 +44,7 @@ Returns an array : [ {"name"=>"chip-seals", "items"=>[#, #]},
             {% comment %}Get documents for currentType{% endcomment %}
             {% assign currentTypeDocs = byType | where: "name", currentType | first %}
             {% if currentTypeDocs != nil %}
-                <h4>{{ typeInfos.name }}</h4>
+                <h4>{{ typeInfos.plural }}</h4>
                 {% for doc in currentTypeDocs.items %}
                   <p>
                     <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
