@@ -13,29 +13,39 @@
       <li><a {% if page.url == "/news/" %} class="current"{% endif %} href="{{site.baseurl}}/news/">News</a></li>
 
       {% comment %} ++++ Knowledge base collections ++++ {% endcomment %}
-      {% for collectionDatas in site.articlesCollections %}
-        {% comment %}This creates a *collection* variable in the global scope{% endcomment %}
-        {% include components/getCollectionFromName.html collectionName=collectionDatas.collection %}
 
-        {% comment %}Only print if we have article in the collection{% endcomment %}
-        {% if collection.docs.size > 0 %}
-            {% assign urlStart = collection.label | append: "/" | prepend: "/" %}
+      {% comment %}Get Knowledge base collections{% endcomment %}
+      {% assign kbCollections = site.collections | where: "isKB", "true" %}
+
+      {% for collection in kbCollections %}
+
+        {% comment %}Interoperability trick{% endcomment %}
+        {% assign versionMajor = jekyll.version | split: "." | first %}
+        {% if versionMajor == "2" %}
+            {% assign currentCollection = collection[1] %}
+        {% else %}
+            {% assign currentCollection = collection %}
+        {% endif %}
+
+        {% comment %}Only print if we have article in the currentCollection{% endcomment %}
+        {% if currentCollection.docs.size > 0 %}
+            {% assign urlStart = currentCollection.label | append: "/" | prepend: "/" %}
             <li class="has-submenu">
               {% comment %}Link to Collection index page{% endcomment %}
-              <a href="{{ site.baseurl }}/{{ collectionDatas.collection }}" {% if page.url == urlStart %}class="current"{% endif %}>{{ collectionDatas.name }}</a>
+              <a href="{{ site.baseurl }}/{{ currentCollection.label }}" {% if page.url == urlStart %}class="current"{% endif %}>{{ currentCollection.name }}</a>
               {% comment %}Sort collections articles by category{% endcomment %}
-              {% assign byCategory = collection.docs | group_by: 'category' %}
+              {% assign byCategory = currentCollection.docs | group_by: 'category' %}
               <ul class="submenu menu vertical" data-submenu>
                 {% comment %}Prints categories in the same order as collection.categories{% endcomment %}
-                {% for cat in collection.categories %}
+                {% for cat in currentCollection.categories %}
                   {% assign currentCat = cat.slug %}
                   {% assign pageUrl = urlStart | append: currentCat | append: "/" %}
                   {% comment %}Look for docs whith a category{% endcomment %}
                   {% assign currentCatDocs = byCategory | where: "name", currentCat | first %}
                   {% if currentCatDocs != nil %}
-                      {% assign categoryDatas = collection.categories | where: 'slug', currentCat | first  %}
+                      {% assign categoryDatas = currentCollection.categories | where: 'slug', currentCat | first  %}
                       <li>
-                      <a {% if page.url == pageUrl %}class="current"{% endif %} href="{{ site.baseurl }}/{{ collection.label }}/{{ categoryDatas.slug }}/">{{ categoryDatas.name }}</a>
+                      <a {% if page.url == pageUrl %}class="current"{% endif %} href="{{ site.baseurl }}/{{ currentCollection.label }}/{{ categoryDatas.slug }}/">{{ categoryDatas.name }}</a>
                       </li>
                   {% endif %}
               {% endfor %}
