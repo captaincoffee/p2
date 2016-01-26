@@ -1,7 +1,7 @@
 ---
 title: Slurry 13
 image_path: ""
-type: articles
+type: article
 ---
 
 Slurry Article 13

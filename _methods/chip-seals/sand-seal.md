@@ -1,7 +1,7 @@
 ---
 title: Sand Seal
 image_path: ""
-type: articles
+type: article
 ---
 Sand Seal line 1
 Sand Seal line 2

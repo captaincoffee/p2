@@ -24,7 +24,7 @@ Base KB's element is **article**.
 
 An **article** can be from one **category** (eg : Fog Seals, Chip Seals, Spray Seals, ... ). Each collection has is own categories (see **categories** paragraph for more informations).
 
-An **article** can be from one type (**article**, **video**, **link**, **project report** or **research study**).
+An **article** can be from one type (**article**, **video**, **link**, **project** or **research**).
 
 An **article** can have one to many **tags**.
 

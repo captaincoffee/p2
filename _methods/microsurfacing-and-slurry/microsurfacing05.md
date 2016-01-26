@@ -1,7 +1,7 @@
 ---
 title: Microsurfacing 11
 image_path: ""
-type: articles
+type: article
 ---
 
 Microsurfacing Article 01

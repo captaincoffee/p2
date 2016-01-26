@@ -1,7 +1,7 @@
 ---
 title: Asphalt 01
 image_path: ""
-type: articles
+type: article
 ---
 
 Asphalt Article 01
