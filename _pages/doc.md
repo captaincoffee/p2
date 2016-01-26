@@ -1,6 +1,7 @@
 ---
 title:  Documentation
 layout: page
+permalink: /doc/
 ---
 
 {% comment %}
@@ -50,14 +51,7 @@ collections:
 All articles for **methods** collections goes in a **_methods/categoryName** folder
 (see **categories** paragraph for more informations).
 
-In order to differentiate **KB** collections from other collections we set a *isKB: true* on the collection.
-
-{% highlight yaml %}
-articlesCollections:
-  - methods
-  - materials
-  - manage
-{% endhighlight %}
+In order to differentiate **KB** collections from other collections we set a `isKB: true` on the collection.
 
 ### Collection's index page
 
@@ -118,7 +112,7 @@ defaults:
   - { scope: { path: "methods/fog-seals" }, values:  { category: "fog-seals" } }
 {% endhighlight %}
 
-Any article file in **_methods/fog-seals** folder will be from **fog-seals** category.
+Any article file in **_methods/fog-seals** folder will see its category set to **fog-seals**.
 
 ### Create the Category index page
 
@@ -133,8 +127,6 @@ Create `methods/fog-seals.md` page containing :
 {% endhighlight %}
 
 {% endcapture %}
-
-
 
 <style>
   pre{
