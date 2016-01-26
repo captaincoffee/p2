@@ -1,9 +1,27 @@
 ---
 layout: default
 ---
+{% comment %}
+Deriving useful variables from page.url
+ - currentCollectionSlug : string current collection slug
+ - currentCollection : jekyll:collection current collection
+ - currentCollectionIndexUrl : string url for current collection
+
+When on a category index page, we also create :
+ - currentCategorySlug : string current category slug
+ - currentCategoryIndexUrl : string url for current category
+{% endcomment %}
+{% include components/getVariablesFromPageUrl.html %}
+{% assign categoryDatas = currentCollection.categories | where: "slug", currentCategorySlug | first %}
+
+<h1>
+    <a href="{{ currentCollectionIndexUrl }}">{{ currentCollection.name }}</a>
+    &gt;
+    <a href="{{ currentCategoryIndexUrl }}">{{ categoryDatas.name }}</a>
+</h1>
 
 <article>
-  <h1>{{ page.title }}</h1>
+  <h2>{{ page.title }}</h2>
   {% if page.date %}
       <p class="meta">{{ page.date | date_to_string }}</p>
   {% endif %}
