@@ -1,0 +1,26 @@
+{% comment %}
+Deriving useful variables from page.url
+ - currentCollectionSlug : string current collection slug
+ - currentCollection : jekyll:collection current collection
+ - currentCollectionIndexUrl : string url for current collection
+
+When on a category index page, we also create :
+ - currentCategorySlug : string current category slug
+ - currentCategoryIndexUrl : string url for current category
+{% endcomment %}
+{% assign dirParts = page.url | split: "/"  %}
+{% assign currentCollectionSlug = dirParts[1] %}
+
+{% comment %}Jekyll 2/3 compatibility trick - see https://github.com/jekyll/jekyll/issues/4392{% endcomment %}
+{% assign versionMajor = jekyll.version | split: "." | first %}
+{% case versionMajor %}
+  {% when '2' %}
+    {% assign currentCollection = site.collections[currentCollectionSlug] %}
+  {% when '3' %}
+    {% assign currentCollection = site.collections | where:'label',currentCollectionSlug | first %}
+{% endcase %}
+{% capture currentCollectionIndexUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{% endcapture %}
+{% if dirParts[2] != nil %}
+    {% assign currentCategorySlug = dirParts[2] %}
+    {% capture currentCategoryIndexUrl %}{{ currentCollectionIndexUrl }}/{{ currentCategorySlug }}/{% endcapture %}
+{% endif %}
