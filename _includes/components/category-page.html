@@ -26,9 +26,14 @@ When on a category index page, we also create :
     {% if currentTypeDocs != nil %}
         <h4>{{ typeInfos.name }}</h4>
         {% for doc in currentTypeDocs.items %}
-          <p>
-            <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
-          </p>
+<article>
+<h5><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></h5>
+{% if doc.content contains site.excerpt_separator %}
+    {% comment %}We have an excerpt{% endcomment %}
+    {{ doc.excerpt | markdownify }}
+    <p><a href="{{ site.baseurl }}{{ doc.url }}">Read more ...</a></p>
+{% endif %}
+</article>
         {% endfor %}
     {% endif %}
 {% endfor %}
