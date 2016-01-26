@@ -38,15 +38,19 @@ This is the basic configuration for a collection.
 
 {% highlight yaml %}
 collections:
+
   methods:
-    output: true
+    output: true   # every page in the collection will be created
+    isKB: true     # is part of Knowledge base
+    name: "Methods" # Print name used in titles, menus, ...
+    categories:
+      [...]
 {% endhighlight %}
 
-All articles for **methods** collections goes in a **_methods/category** folder
+All articles for **methods** collections goes in a **_methods/categoryName** folder
 (see **categories** paragraph for more informations).
 
-In order to differentiate **KB** collections from other collections that can be created latter,
-we reference them in a `site.articlesCollections` array variable in **_config.yml**.
+In order to differentiate **KB** collections from other collections we set a *isKB: true* on the collection.
 
 {% highlight yaml %}
 articlesCollections:
@@ -57,7 +61,7 @@ articlesCollections:
 
 ### Collection's index page
 
-For our methods collection we have a _pages/methods.html page.
+For our **methods** collection we have a methods/index.html page.
 
 {% highlight yaml %}
 {% raw %}
