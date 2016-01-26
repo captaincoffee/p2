@@ -1,0 +1,68 @@
+{% comment %} === Deriving Collection's slug from page.url ===
+This creates a *collectionSlug* variable in the global scope{% endcomment %}
+{% include components/getCollectionSlugFromPageUrl.html %}
+
+{% comment %}This creates a *collection* variable in the global scope{% endcomment %}
+{% include components/getCollectionFromName.html collectionName=collectionSlug %}
+{% comment %}
+You now have a **collection** variable available in the global context
+Returns : Hash
+    {"output"=>true,
+     "categories"=>
+      [{"name"=>"Fog Seals", "slug"=>"fog-seals"},
+       ...],
+     "label"=>"methods",
+     "docs"=>
+      [#, ...],
+     "files"=>[],
+     "directory"=>"/home/djacquel/www/test.dev/jekyll/p2/_methods",
+     "relative_directory"=>"_methods"}
+{% endcomment %}
+<h1>{{ collection.name }}</h1>
+
+{% comment %}Sort collections articles by category
+Returns an array : [ {"name"=>"chip-seals", "items"=>[#, #]},
+                     {"name"=>"crack-joint-treatments", "items"=>[#]},
+                     {"name"=>"microsurfacing-slurry", "items"=>[#]} ]
+{% endcomment %}
+{% assign byCategory = collection.docs | group_by: 'category' %}
+
+{% comment %}Prints categories in the same order as collection.categories{% endcomment %}
+{% for cat in collection.categories %}
+
+    {% assign currentCategory = cat.slug %}
+
+    {% comment %}
+    Look for docs in currentCategory
+    returns a hash : {"name"=>"chip-seals", "items"=>[#, #]}
+    {% endcomment %}
+    {% assign currentCatDocs = byCategory | where: "name", currentCategory | first %}
+
+    {% if currentCatDocs != nil %}
+
+        {% assign categoryDatas = collection.categories | where: 'slug', currentCategory | first  %}
+        {% capture categoryUrl %}{{ site.baseurl }}/{{ collection.label }}/{{ categoryDatas.slug }}/{% endcapture %}
+        <h3> <a href="{{ categoryUrl }}">{{ categoryDatas.name }}</a></h3>
+
+        {% comment %}Sort current category documents by type
+        retunr an array  : [ {"name"=>"videos", "items"=>[#]},
+                             {"name"=>"articles", "items"=>[#]} ]
+        {% endcomment %}
+        {% assign byType = currentCatDocs.items | group_by: 'type' %}
+
+        {% comment %}Sorting documents by type in site.types order{% endcomment %}
+        {% for typeInfos in site.types %}
+            {% assign currentType = typeInfos.slug %}
+            {% comment %}Get documents for currentType{% endcomment %}
+            {% assign currentTypeDocs = byType | where: "name", currentType | first %}
+            {% if currentTypeDocs != nil %}
+                <h4>{{ typeInfos.name }}</h4>
+                {% for doc in currentTypeDocs.items %}
+                  <p>
+                    <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+                  </p>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}

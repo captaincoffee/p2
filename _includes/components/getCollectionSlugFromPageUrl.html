@@ -1,0 +1,11 @@
+{% comment %}
+Deriving Collection's datas from page.url
+As a collection index page is in a collectionName folder and permalink is set to
+"pretty", we always ends up with a "/collectionName/" url
+====== This creates a collectionSlug variable in the global scope ====
+{% endcomment %}
+{% assign dirParts = page.url | split: "/"  %}{% assign collectionSlug = dirParts[1] %}
+{% comment %}
+You now have a *collectionSlug* variable available in parent (including) file
+returns : string collectionSlug
+{% endcomment %}
