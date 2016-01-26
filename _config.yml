@@ -79,14 +79,15 @@ paginate:      5
 # redcarpet:
 #   extensions: []
 
-# kramdown:
+kramdown:
 #   auto_ids: true
 #   footnote_nr: 1
 #   entity_output: as_char
 #   toc_levels: 1..6
 #   smart_quotes: lsquo,rsquo,ldquo,rdquo
 #   use_coderay: false
-
+    parse_block_html: true
+    parse_span_html: true
 #   coderay:
 #     coderay_wrap: div
 #     coderay_line_numbers: inline
