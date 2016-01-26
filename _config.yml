@@ -54,7 +54,7 @@ paginate:      5
 # markdown_ext:  markdown,mkdown,mkdn,mkd,md
 # textile_ext:   textile
 
-# excerpt_separator: "\n\n"
+excerpt_separator: "<!--more-->"
 
 # safe:        false
 # watch:       false    # deprecated
