@@ -166,12 +166,12 @@ collections:
       - { name: "Data Management", slug: "data-management" }
       - { name: "Training", slug: "training" }
 
-# this array determine types order
-# a collection item with non matching type will not be listed
+# this array determine article's types and order
+# a collection article with non matching type will not be listed
 # article must be tagged with a type.slug
-# eg : "type: articles" or "type: research"
+# eg : "type: article" or "type: research"
 
-types :
+articleTypes :
   - { name: "Article", plural: "Articles", slug: "article" }
   - { name: "Video", plural: "Videos", slug: "video" }
   - { name: "Link", plural: "Links", slug: "link" }

@@ -38,17 +38,20 @@ Returns an array : [ {"name"=>"chip-seals", "items"=>[#, #]},
         {% endcomment %}
         {% assign byType = categoryDocs.items | group_by: 'type' %}
 
-        {% comment %}Sorting documents by type in site.types order{% endcomment %}
-        {% for typeInfos in site.types %}
+        {% comment %}Sorting documents by type in site.articleTypes order{% endcomment %}
+        {% for typeInfos in site.articleTypes %}
             {% assign currentType = typeInfos.slug %}
             {% comment %}Get documents for currentType{% endcomment %}
             {% assign currentTypeDocs = byType | where: "name", currentType | first %}
             {% if currentTypeDocs != nil %}
                 <h4>{{ typeInfos.plural }}</h4>
                 {% for doc in currentTypeDocs.items %}
-                  <p>
-                    <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
-                  </p>
+                    <article>
+                        <h5><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></h5>
+                        {% if page.date %}
+                            <p>date : {{ doc.date | date: '%y/%m/%d %H:%M:%S' }}</p>
+                        {% endif %}
+                    </article>
                 {% endfor %}
             {% endif %}
         {% endfor %}
