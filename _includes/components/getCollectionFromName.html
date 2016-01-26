@@ -1,0 +1,17 @@
+{% comment %}
+    Interoperable code to get a collection from the site.collections array
+    see https://github.com/jekyll/jekyll/issues/4392
+{% endcomment %}
+
+{% assign collectionName = include.collectionName %}
+{% assign versionMajor = jekyll.version | split: "." | first %}
+{% case versionMajor %}
+  {% when '2' %}
+    {% assign collection = site.collections[collectionName] %}
+  {% when '3' %}
+    {% assign collection = site.collections | where:'label',collectionName | first %}
+{% endcase %}
+
+{% comment %}
+You now have a **collection** variable available in the global context
+{% endcomment %}
