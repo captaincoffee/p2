@@ -3,41 +3,24 @@ Deriving useful variables from page.url
  - currentCollectionSlug : string current collection slug
  - currentCollection : jekyll:collection current collection
  - currentCollectionIndexUrl : string url for current collection
+ - currentCollectionDocsByCategory : array current collection documents sorted by category
+   returns : [ {"name"=>"chip-seals", "items"=>[#, #]},
+               {"name"=>"crack-joint-treatments", "items"=>[#]},
+               {"name"=>"microsurfacing-slurry", "items"=>[#]} ]
 
 When on a category index page, we also create :
  - currentCategorySlug : string current category slug
+ - currentCategoryDatas : array { name: "Safety", slug: "safety" }
  - currentCategoryIndexUrl : string url for current category
 {% endcomment %}
 {% include components/getVariablesFromPageUrl.html %}
 
-{% assign categoryDatas = currentCollection.categories | where: "slug", currentCategorySlug | first %}
+<nav aria-label="You are here:" role="navigation">
+<ul class="breadcrumbs">
+    <li><a href="{{ site.baseurl}}/">Home</a></li>
+    <li><a href="{{ currentCollectionIndexUrl }}">{{ currentCollection.name }}</a></li>
+    <li>{{ currentCategoryDatas.name }}</li>
+</ul>
+</nav>
 
-<h1>
-    <a href="{{ currentCollectionIndexUrl }}">{{ currentCollection.name }}</a>
-    &gt; {{ categoryDatas.name }}
-</h1>
-
-{% assign categoryDocs = currentCollection.docs | where: "category", currentCategorySlug %}
-
-{% assign byType = categoryDocs | group_by: 'type' %}
-{% for typeInfos in site.articleTypes %}
-
-    {% assign currentType = typeInfos.slug %}
-    {% assign currentTypeDocs = byType | where: "name", currentType | first %}
-
-    {% if currentTypeDocs != nil %}
-        <h4>{{ typeInfos.plural }}</h4>
-
-        {% for doc in currentTypeDocs.items %}
-            <article>
-            <h5><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></h5>
-            {% comment %}If we have an excerpt, we print it
-            There is no excerpt in Jekyll 2 collections, so here's another workaround {% endcomment %}
-            {% assign parts = doc.content | split: site.excerpt_separator %}
-            {% if parts.size > 1 %} {% comment %}Print excerpt if we have one{% endcomment %}
-                {{ parts[0] | markdownify }}
-            {% endif %}
-            </article>
-        {% endfor %}
-    {% endif %}
-{% endfor %}
+{% include components/printDocumentsForCategory.html category=currentCategoryDatas startHeaderLevel=1 %}

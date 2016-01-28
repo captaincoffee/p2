@@ -3,57 +3,27 @@ Deriving useful variables from page.url
  - currentCollectionSlug : string current collection slug
  - currentCollection : jekyll:collection current collection
  - currentCollectionIndexUrl : string url for current collection
+ - currentCollectionDocsByCategory : array current collection documents sorted by category
+   returns : [ {"name"=>"chip-seals", "items"=>[#, #]},
+               {"name"=>"crack-joint-treatments", "items"=>[#]},
+               {"name"=>"microsurfacing-slurry", "items"=>[#]} ]
 
 When on a category index page, we also create :
  - currentCategorySlug : string current category slug
+ - currentCategoryDatas : array { name: "Safety", slug: "safety" }
  - currentCategoryIndexUrl : string url for current category
 {% endcomment %}
 {% include components/getVariablesFromPageUrl.html %}
 
+<nav aria-label="You are here:" role="navigation">
+<ul class="breadcrumbs">
+    <li><a href="{{ site.baseurl}}/">Home</a></li>
+    <li>{{ currentCollection.name }}</li>
+</ul>
+</nav>
 <h1>{{ currentCollection.name }}</h1>
-
-{% comment %}Sort collections articles by category
-Returns an array : [ {"name"=>"chip-seals", "items"=>[#, #]},
-                     {"name"=>"crack-joint-treatments", "items"=>[#]},
-                     {"name"=>"microsurfacing-slurry", "items"=>[#]} ]
-{% endcomment %}
-{% assign byCategory = currentCollection.docs | group_by: 'category' %}
 
 {% comment %}Prints categories in the same order as collection.categories{% endcomment %}
 {% for category in currentCollection.categories %}
-
-    {% comment %}
-    Look for docs in current listed Category
-    returns a hash : {"name"=>"chip-seals", "items"=>[#, #]}
-    {% endcomment %}
-    {% assign categoryDocs = byCategory | where: "name", category.slug | first %}
-
-    {% if categoryDocs != nil %}
-        {% capture categoryUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{{ category.slug }}/{% endcapture %}
-        <h3> <a href="{{ categoryUrl }}">{{ category.name }}</a></h3>
-
-        {% comment %}Sort category documents by type
-        return an array  : [ {"name"=>"videos", "items"=>[#]},
-                             {"name"=>"articles", "items"=>[#]} ]
-        {% endcomment %}
-        {% assign byType = categoryDocs.items | group_by: 'type' %}
-
-        {% comment %}Sorting documents by type in site.articleTypes order{% endcomment %}
-        {% for typeInfos in site.articleTypes %}
-            {% assign currentType = typeInfos.slug %}
-            {% comment %}Get documents for currentType{% endcomment %}
-            {% assign currentTypeDocs = byType | where: "name", currentType | first %}
-            {% if currentTypeDocs != nil %}
-                <h4>{{ typeInfos.plural }}</h4>
-                {% for doc in currentTypeDocs.items %}
-                    <article>
-                        <h5><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></h5>
-                        {% if page.date %}
-                            <p>date : {{ doc.date | date: '%y/%m/%d %H:%M:%S' }}</p>
-                        {% endif %}
-                    </article>
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+    {% include components/printDocumentsForCategory.html category=category startHeaderLevel=2 %}
 {% endfor %}
