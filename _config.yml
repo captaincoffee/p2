@@ -172,11 +172,11 @@ collections:
 # eg : "type: article" or "type: research"
 
 articleTypes :
-  - { name: "Article", plural: "Articles", slug: "article" }
-  - { name: "Video", plural: "Videos", slug: "video" }
-  - { name: "Link", plural: "Links", slug: "link" }
-  - { name: "Project report", plural: "Project reports", slug: "project" }
-  - { name: "Research Study", plural: "Research studies", slug: "research" }
+  - { name: "Article", plural: "Articles", slug: "article", icon: "fi-page" }
+  - { name: "Video", plural: "Videos", slug: "video", icon: "fi-video" }
+  - { name: "Link", plural: "Links", slug: "link", icon: "fi-link" }
+  - { name: "Project report", plural: "Project reports", slug: "project", icon: "fi-page-search" }
+  - { name: "Research Study", plural: "Research studies", slug: "research", icon: "fi-compass" }
 
 ############### DEFAULT CONFIGURATION ####################
 defaults:
