@@ -1,34 +1,26 @@
----
-layout: default
----
 {% comment %}
 Deriving useful variables from page.url
  - currentCollectionSlug : string current collection slug
  - currentCollection : jekyll:collection current collection
  - currentCollectionIndexUrl : string url for current collection
+ - currentCollectionDocsByCategory : array current collection documents sorted by category
+   returns : [ {"name"=>"chip-seals", "items"=>[#, #]},
+               {"name"=>"crack-joint-treatments", "items"=>[#]},
+               {"name"=>"microsurfacing-slurry", "items"=>[#]} ]
 
 When on a category index page, we also create :
  - currentCategorySlug : string current category slug
+ - currentCategoryDatas : array { name: "Safety", slug: "safety" }
  - currentCategoryIndexUrl : string url for current category
 {% endcomment %}
 {% include components/getVariablesFromPageUrl.html %}
-{% assign categoryDatas = currentCollection.categories | where: "slug", currentCategorySlug | first %}
 
 <nav aria-label="You are here:" role="navigation">
 <ul class="breadcrumbs">
     <li><a href="{{ site.baseurl}}/">Home</a></li>
     <li><a href="{{ currentCollectionIndexUrl }}">{{ currentCollection.name }}</a></li>
-    <li><a href="{{ currentCategoryIndexUrl }}">{{ categoryDatas.name }}</a></li>
-    <li>{{ page.title }}</li>
+    <li>{{ currentCategoryDatas.name }}</li>
 </ul>
 </nav>
 
-<article>
-  <h2>{{ page.title }}</h2>
-  {% if page.date %}
-      <p class="meta">{{ page.date | date_to_string }}</p>
-  {% endif %}
-  <p class="post-content">
-  {{ content }}
-  </p>
-</article>
+{% include components/printDocumentsForCategory.html category=currentCategoryDatas startHeaderLevel=1 %}
