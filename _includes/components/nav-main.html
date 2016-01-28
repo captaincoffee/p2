@@ -30,9 +30,20 @@
         {% comment %}Only print if we have article in the currentCollection{% endcomment %}
         {% if currentCollection.docs.size > 0 %}
             {% assign urlStart = currentCollection.label | append: "/" | prepend: "/" %}
+            {% assign categoryClass = "" %}
+
+            {% if page.url == urlStart %}
+              {% assign categoryClass = "current" %}
+            {% endif %}
+
+            {% assign isChildCategoryPage = page.url | split: urlStart | first %}
+            {% if isChildCategoryPage == "" %}
+              {% assign categoryClass = "current" %}
+            {% endif %}
+
             <li class="has-submenu">
               {% comment %}Link to Collection index page{% endcomment %}
-              <a href="{{ site.baseurl }}/{{ currentCollection.label }}" {% if page.url == urlStart %}class="current"{% endif %}>{{ currentCollection.name }}</a>
+              <a href="{{ site.baseurl }}/{{ currentCollection.label }}" class="{{ categoryClass }}">{{ currentCollection.name }}</a>
               {% comment %}Sort collections articles by category{% endcomment %}
               {% assign byCategory = currentCollection.docs | group_by: 'category' %}
               <ul class="submenu menu vertical" data-submenu>
@@ -60,19 +71,3 @@
     </ul>
   </div>
 </div>
-
-
-
-<!-- <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="has-submenu">
-            <a href="#">One</a>
-            <ul class="submenu menu vertical" data-submenu>
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul> -->
