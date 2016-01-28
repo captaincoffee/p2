@@ -93,3 +93,15 @@ $menu-background: #333;
 iframe {
   max-width: 100%;
 }
+
+.tabs-title > a{
+  font-size: $global-font-size;
+}
+
+pre{
+    background: #E6E6E6;
+  }
+code{
+    background: #E6E6E6;
+    border: none;
+  }

@@ -72,12 +72,12 @@
 // -----------
 
 // $breadcrumbs-margin: 0 0 $global-margin 0;
-// $breadcrumbs-item-font-size: rem-calc(11);
+$breadcrumbs-item-font-size: rem-calc(16);
 // $breadcrumbs-item-color: $primary-color;
 // $breadcrumbs-item-color-current: $black;
 // $breadcrumbs-item-color-disabled: $medium-gray;
 // $breadcrumbs-item-margin: 0.75rem;
-// $breadcrumbs-item-uppercase: true;
+$breadcrumbs-item-uppercase: false;
 // $breadcrumbs-item-slash: true;
 
 // Breakpoints
@@ -201,7 +201,7 @@
 // ------
 
 // $global-width: rem-calc(1200);
-// $global-font-size: 100%;
+$global-font-size: 16px;
 $global-lineheight: 1.6;   // 1.5
 $primary-color: #16a085;   //#27ae60;  // #2199e8;
 // $secondary-color: #777;
