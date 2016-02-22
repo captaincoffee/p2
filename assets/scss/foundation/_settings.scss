@@ -72,7 +72,7 @@
 // -----------
 
 // $breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(16);
+$breadcrumbs-item-font-size: 0.875rem;  // rem-calc(16)
 // $breadcrumbs-item-color: $primary-color;
 // $breadcrumbs-item-color-current: $black;
 // $breadcrumbs-item-color-disabled: $medium-gray;
@@ -200,10 +200,10 @@ $breadcrumbs-item-uppercase: false;
 // Global
 // ------
 
-// $global-width: rem-calc(1200);
-$global-font-size: 16px;
+$global-width: rem-calc(1600);
+$global-font-size: 100%;
 $global-lineheight: 1.6;   // 1.5
-$primary-color: #16a085;   //#27ae60;  // #2199e8;
+$primary-color: #00aa00;  //#086822;   //#16a085;   //#27ae60;  // #2199e8;
 // $secondary-color: #777;
 // $success-color: #3adb76;
 // $warning-color: #ffae00;
@@ -215,7 +215,7 @@ $primary-color: #16a085;   //#27ae60;  // #2199e8;
 // $white: #fefefe;
 // $body-background: $white;
 // $body-font-color: $black;
-$body-font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: Arial, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; //  "Open Sans",
 // $body-antialiased: true;
 // $text-direction: ltr;
 // $global-margin: 1rem;
@@ -223,7 +223,7 @@ $body-font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans
 // $global-margin: 1rem;
 // $global-weight-normal: normal;
 // $global-weight-bold: bold;
-$global-radius: 0;    //3px;
+$global-radius: 3px;
 // $global-namespace: false;
 // $global-text-direction: ltr;
 // $rem-base: 16px;
@@ -414,28 +414,28 @@ $global-radius: 0;    //3px;
 // Base Typography
 // ---------------
 
-// $header-font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;  //$body-font-family;
-$header-font-weight: 700;
+// $header-font-family: $body-font-family; // option  Helvetica, "Helvetica Neue", Roboto, Arial, sans-serif;  //"Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$header-font-weight: 700;   // bold;
 // $header-font-style: normal;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
-// $header-sizes: (
-//   small: (
-//     'h1': 24,
-//     'h2': 20,
-//     'h3': 19,
-//     'h4': 18,
-//     'h5': 17,
-//     'h6': 16,
-//   ),
-//   medium: (
-//     'h1': 48,
-//     'h2': 40,
-//     'h3': 31,
-//     'h4': 25,
-//     'h5': 20,
-//     'h6': 16,
-//   ),
-// );
+$font-family-monospace: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+$header-sizes: (
+  small: (
+    'h1': 24,
+    'h2': 20,
+    'h3': 19,
+    'h4': 18,
+    'h5': 17,
+    'h6': 16,
+  ),
+  medium: (
+    'h1': 44,  //48,
+    'h2': 32,  //40,
+    'h3': 24,  //31,
+    'h4': 20,  //25,
+    'h5': 16,  //20,
+    'h6': 16,
+  ),
+);
 // $header-color: inherit;
 // $header-lineheight: 1.4;
 // $header-margin-bottom: 0.5rem;

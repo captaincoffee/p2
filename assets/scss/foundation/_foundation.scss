@@ -1,7 +1,7 @@
 // --------------------------------------------------
 // Foundation
 // --------------------------------------------------
-// This file imports all of the pieces 
+// This file imports all of the pieces
 // of the Foundation framework
 
 // Make sure the charset is set appropriately
@@ -34,7 +34,7 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-accordion;
-@include foundation-badge;
+// @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-callout;
@@ -46,14 +46,14 @@
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
-@include foundation-off-canvas;
-@include foundation-orbit;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
 @include foundation-pagination;
-@include foundation-progress-bar;
-@include foundation-slider;
+// @include foundation-progress-bar;
+// @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
-@include foundation-switch;
+// @include foundation-switch;
 @include foundation-table;
 @include foundation-tabs;
 @include foundation-thumbnail;

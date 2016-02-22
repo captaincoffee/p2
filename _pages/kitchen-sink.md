@@ -102,10 +102,9 @@ Remember to escape angle brackets when printing HTML: <code>&lt;div&gt;</code>
 
 <p class="lead">What are your cats <em>really</em> dreaming about while they sleep?</p>
 
-### Statistics
 
-<p>Days without merge conflict</p>
-<div class="stat">128</div>
+
+
 
 ## Accordion
 
@@ -709,4 +708,3 @@ The <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='
     </ul>
   </div>
 </div>
-

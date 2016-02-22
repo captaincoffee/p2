@@ -2,19 +2,26 @@
 // Theme
 // --------------------------------------------------
 
+body {
+	margin: 0;
+
+	@media only screen and (min-width: 40em) {
+		margin: 0 1em;	}
+}
+
 .button {
 	font-weight: 700;
 }
 
-$menu-background: #333;
+$menu-background: $white;
 
 .title-bar {
   background: $menu-background;
-  padding: 0.9rem;
 }
 
 .top-bar {
   background: $menu-background;
+	padding: 0;
 
   ul {
     background: $menu-background;
@@ -23,85 +30,142 @@ $menu-background: #333;
       background: $menu-background;
 
         a {
-          color: #fff;
-      }
+          color: #000;
+      	}
     }
   }
 }
 
-#main-menu a.current{
-  background: $primary-color;
+.title-bar-title {
+	color: $black;
+	font-size: 1.25em;
+}
+
+.title-bar .button {
+	margin: 0 0 0 0;
+}
+
+// Site Name in Header
+.top-bar-left .menu-text {
+  color: #000;
+	font-weight: 700;
+	font-size: 1.5em;
+	padding: .4em 0.7em 0;
 }
 
 .menu-text {
-  color: #fff;
+  // color: #fff;
 
   @media only screen and (max-width: 40em) {
     display: none !important;
   }
 }
 
-@media only screen and (min-width: 40em) {
-  .menu:last-child {
-    border-left: 1px solid #4e4e4e;
-  }
+// Navigation
+.top-bar-right ul a {
+   border-bottom: 4px solid transparent;
+}
 
-  .menu:first-child {
-    border-left: none;
-  }
+.top-bar-right ul a.current {
+   border-bottom: 4px solid $primary-color;
 
-  .menu {
-    li:not(:last-child) {
-      border-right: 1px solid #4e4e4e;
-    }
-  }
+	 @media only screen and (max-width: 40em) {
+		 border-bottom: none;
+	 }
+}
+
+.top-bar-right .is-dropdown-submenu a.current {
+   border-bottom: none;
+}
+
+.menu>li:not(.menu-text)>a {
+		padding: 1em .5em .25em .5em;
+
+		@media only screen and (max-width: 40em) {
+			padding: 1em .5em .25em 1em;
+	  }
 }
 
 .dropdown.menu .submenu {
-  border: none;
+  border: 1px solid $primary-color;
 }
 
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
-  border-color: #fff transparent transparent;
+  border-color: $primary-color transparent transparent;
 }
 
 .is-drilldown-submenu-parent>a::after {
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent $primary-color;
 }
 
 .js-drilldown-back::before {
-  border-color: transparent #fff transparent transparent;
+  border-color: transparent $primary-color transparent transparent;
+}
+
+.js-drilldown-back {
+	font-weight: 700;
+	color: $primary-color;
 }
 
 .is-drilldown li {
   border-top: 1px solid #4e4e4e;
-  width: 240px;
+  //width: 240px;
 }
 
 .is-drilldown-submenu-item {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 .is-drilldown li:first-child {
-    border-top: none;
+  border-top: none;
   }
 
-.catbloc:not(:target) {
-    display: none;
+.breadcrumbs {
+    list-style: none;
+    margin: .5rem 0 .5rem 0;
 }
 
+// Google Calendar and such
 iframe {
   max-width: 100%;
 }
 
+// Tabs
 .tabs-title > a{
-  font-size: $global-font-size;
+  font-size: .9rem;
+	padding: .75rem .5rem;
+
+	@media only screen and (min-width: 40em) {
+		font-size: 1rem;
+		padding: 1rem .75rem;
+	}
 }
 
-pre{
+.tabs-panel {
+    padding: .5rem .5rem 0 .5rem;
+}
+
+.tabs-content+h2{
+	margin-top: 1.5rem;
+}
+
+// Code Examples
+pre {
     background: #E6E6E6;
+		overflow: auto;
   }
-code{
+code {
     background: #E6E6E6;
+		overflow: auto;
     border: none;
   }
+
+	// Post Archive example from
+	// https://schoewilliam.fr/2015/02/10/jekyll-pro-tip-awesome-archive-page.html
+.catbloc:not(:target) {
+	  display: none;
+	}
+
+.fi-compass:before { content: "\f133"; width: 1rem; text-align: right;}
+
+	//.fi-*:before { content: "\f133"; width: 2.75rem;}

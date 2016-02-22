@@ -148,7 +148,7 @@ gulp.task('js', function() {
             */
             // config.vendorSrc + 'foundation-sites/js/foundation.abide.js',
             config.vendorSrc + 'foundation-sites/js/foundation.accordion.js',
-            config.vendorSrc + 'foundation-sites/js/foundation.accordionMenu.js',
+            // config.vendorSrc + 'foundation-sites/js/foundation.accordionMenu.js',
             config.vendorSrc + 'foundation-sites/js/foundation.drilldown.js',
             config.vendorSrc + 'foundation-sites/js/foundation.dropdown.js',
             config.vendorSrc + 'foundation-sites/js/foundation.dropdownMenu.js',
