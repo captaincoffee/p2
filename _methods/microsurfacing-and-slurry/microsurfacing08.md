@@ -1,7 +1,7 @@
 ---
 title: Microsurfacing 08
 image_path: ""
-type: research
+type: link
 ---
 
 Microsurfacing Article 08

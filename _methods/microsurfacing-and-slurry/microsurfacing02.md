@@ -1,6 +1,6 @@
 ---
 title: Microsurfacing 02
 image_path: ""
-type: video
+type: research
 ---
 Microsurfacing Article 02

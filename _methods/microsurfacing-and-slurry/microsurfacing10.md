@@ -1,7 +1,7 @@
 ---
 title: Another Microsurfacing 10
 image_path: ""
-type: article
+type: project
 ---
 
 Microsurfacing Article 04
