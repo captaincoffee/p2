@@ -2,7 +2,7 @@
 // Theme
 // --------------------------------------------------
 
-body {
+article {
 	margin: 0;
 
 	@media only screen and (min-width: 40em) {
@@ -160,11 +160,31 @@ code {
     border: none;
   }
 
-	// Post Archive example from
-	// https://schoewilliam.fr/2015/02/10/jekyll-pro-tip-awesome-archive-page.html
-.catbloc:not(:target) {
-	  display: none;
-	}
+h1 {
+	padding-top: 1.5rem;
+	text-align: center;
+}
+
+article {
+	font-size: 1.125em;
+}
+
+footer {
+	background-color: #444;
+	color: #eee;
+	padding: 0 0 2em 0;
+	width: 100%;
+}
+
+footer a{
+	color: #eee;
+}
+
+// Post Archive example from
+// https://schoewilliam.fr/2015/02/10/jekyll-pro-tip-awesome-archive-page.html
+// 	.catbloc:not(:target) {
+// 	  display: none;
+// 	}
 
 .fi-compass:before { content: "\f133"; width: 1rem; text-align: right;}
 
