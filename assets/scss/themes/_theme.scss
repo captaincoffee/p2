@@ -2,6 +2,10 @@
 // Theme
 // --------------------------------------------------
 
+header {
+  margin: .5em 0 0 0;
+}
+
 article {
 	margin: 0;
 
@@ -36,9 +40,10 @@ $menu-background: $white;
   }
 }
 
+// Site Name on Small Screens
 .title-bar-title {
 	color: $black;
-	font-size: 1.25em;
+	font-size: 1em;
 }
 
 .title-bar .button {
@@ -50,7 +55,11 @@ $menu-background: $white;
   color: #000;
 	font-weight: 700;
 	font-size: 1.5em;
-	padding: .4em 0.7em 0;
+	padding: .4em 0.6em 0 0.7em;
+}
+
+.top-bar-right {
+	padding: 0 0.6em 0 0.7em;
 }
 
 .menu-text {
@@ -120,10 +129,24 @@ $menu-background: $white;
   border-top: none;
   }
 
-.breadcrumbs {
-    list-style: none;
-    margin: .5rem 0 .5rem 0;
-}
+	h1 {
+		padding-top: 1.5rem;
+		text-align: center;
+	}
+
+	.post-meta {
+		text-align: center;
+	}
+
+	.breadcrumbs {
+		list-style: none;
+		margin: .5em 1em .5em .5em;
+	}
+
+	article {
+		font-size: 1.125em;
+		margin: 0 0 3em 0;
+	}
 
 // Google Calendar and such
 iframe {
@@ -159,15 +182,6 @@ code {
 		overflow: auto;
     border: none;
   }
-
-h1 {
-	padding-top: 1.5rem;
-	text-align: center;
-}
-
-article {
-	font-size: 1.125em;
-}
 
 footer {
 	background-color: #444;

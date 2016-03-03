@@ -15,22 +15,28 @@ When on a category index page, we also create :
 {% assign categoryDatas = currentCollection.categories | where: "slug", currentCategorySlug | first %}
 
 <nav aria-label="You are here:" role="navigation">
-<ul class="breadcrumbs">
+  <ul class="breadcrumbs">
     <li><a href="{{ site.baseurl}}/">Home</a></li>
     <li><a href="{{ currentCollectionIndexUrl }}">{{ currentCollection.name }}</a></li>
     <li><a href="{{ currentCategoryIndexUrl }}">{{ categoryDatas.name }}</a></li>
     <li>{{ page.title }}</li>
-</ul>
+  </ul>
 </nav>
 
-<article>
-  <h1>{{ page.title }}</h1>
-  {% if page.date %}
-      <p class="meta">{{ page.date | date_to_string }}</p>
-  {% endif %}
-  <p class="post-content">
+<div class="row">
+  <div class="medium-10 large-8 medium-centered columns">
 
-  {{ content }}
-  
-  </p>
-</article>
+    <article>
+    <h1>{{ page.title }}</h1>
+      {% if page.date %}
+          <p class="post-meta">{{ page.date | date_to_string }}</p>
+      {% endif %}
+      <p class="post-content">
+
+        {{ content }}
+
+      </p>
+    </article>
+
+  </div><!-- /.medium-10 large-8 medium-centered columns -->
+</div><!-- /.row -->
