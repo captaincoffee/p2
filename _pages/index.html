@@ -1,0 +1,26 @@
+---
+permalink: /
+layout: home
+title: Latest News
+---
+<div class="row">
+  <div class="medium-8 large-9 columns">
+
+    <ul class="front_post_list">
+      {% for post in site.posts limit: 6 %}
+        <li>
+          <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+          {{ post.excerpt }}
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div><!-- /.medium-8 large-9 columns -->
+
+  <div class="medium-4 large-3 columns">
+
+    SIDEBAR GOES HERE
+
+  </div><!-- /.medium-4 large-3 columns -->
+
+</div><!-- /.row -->
