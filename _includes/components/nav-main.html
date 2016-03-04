@@ -11,6 +11,7 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown">
+      <li><a class="hide-for-medium" href="{{site.baseurl}}">HOME</a></li>
       <li><a {% if page.url == "/news/" %} class="current"{% endif %} href="{{site.baseurl}}/news/">News</a></li>
 
       {% comment %} ++++ Knowledge base collections ++++ {% endcomment %}
@@ -66,6 +67,7 @@
         {% endif %}
       {% endfor %}
 
+      <li><a{% if page.url == "/p2qa/" %} class="current"{% endif %} href="{{site.baseurl}}/p2qa/">Q&amp;A</a></li>
       <li><a{% if page.url == "/events/" %} class="current"{% endif %} href="{{site.baseurl}}/events/">Events</a></li>
       <li><a{% if page.url == "/kitchen-sink/" %} class="current"{% endif %} href="{{site.baseurl}}/kitchen-sink/">Kitchen Sink</a></li>
       <li><a{% if page.url == "/doc/" %} class="current"{% endif %} href="{{site.baseurl}}/doc/">Doc</a></li>

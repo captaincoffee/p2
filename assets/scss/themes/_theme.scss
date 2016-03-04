@@ -67,7 +67,7 @@ $menu-background: $white;
 .menu-text {
   // color: #fff;
 
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 55em) {
     display: none !important;
   }
 }
@@ -115,6 +115,26 @@ iframe {
 
 .tabs-content+h2{
 	margin-top: 1.5rem;
+}
+
+// Pagination
+.pagination li {
+    font-size: 1rem;
+    margin-right: 0.1875rem;
+    display: inline-block;
+    border-radius: 3px;
+ }
+
+ .pagination .current a {
+    padding: 0.1875rem 0.625rem;
+    background: $primary-color;
+    color: #fff;
+    font-weight: 700;
+    cursor: default;
+}
+
+.pagination .arrow {
+   font-size: 1.5rem;
 }
 
 // Code Examples
