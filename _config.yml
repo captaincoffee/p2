@@ -188,6 +188,7 @@ collections:
       - { name: "Data Management", slug: "data-management" }
       - { name: "Training", slug: "training" }
 
+############### ARTICLES TYPES ####################
 # this array determine article's types and order
 # a collection article with non matching type will not be listed
 # article must be tagged with a type.slug
@@ -197,8 +198,8 @@ articleTypes :
   - { name: "Article", plural: "Articles", slug: "article", icon: "fi-page" }
   - { name: "Video", plural: "Videos", slug: "video", icon: "fi-video" }
   - { name: "Link", plural: "Links", slug: "link", icon: "fi-link" }
-  - { name: "Project", plural: "Projects", slug: "project", icon: "fi-page-search" }
-  - { name: "Research", plural: "Research", slug: "research", icon: "fi-compass" }
+  - { name: "Project report", plural: "Project reports", slug: "project", icon: "fi-page-search" }
+  - { name: "Research Study", plural: "Research studies", slug: "research", icon: "fi-compass" }
 
 ############### DEFAULT CONFIGURATION ####################
 defaults:
