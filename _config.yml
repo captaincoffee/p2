@@ -46,7 +46,6 @@ gems:         [
 # limit_posts: 0
 # highlighter: pygments
 
-permalink: /news/:year/:title/
 paginate_path: '/news/page:num'
 paginate:      5
 
@@ -203,6 +202,10 @@ articleTypes :
 
 ############### DEFAULT CONFIGURATION ####################
 defaults:
+
+  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/" } }
+
+
   - { scope: { type: "pages" }, values: { layout: "default" } }
 
   # default layout for collections articles
