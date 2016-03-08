@@ -62,7 +62,7 @@ excerpt_separator: "<!--more-->"
 # host:        0.0.0.0
 # port:        4000
 # url:         ""
-# baseurl:     ""
+baseurl:     "/p2"
 # lsi:         false
 
 # maruku:
@@ -101,6 +101,29 @@ kramdown:
 
 permalink: pretty
 
+############### GITHUB ####################
+# Used by Rakefile to push code and generated pages to github pages
+github:
+  user:       "djacquel" # eg: toto
+  repository: "p2"   # eg: project-repo or p2.github.io
+  remoteName: "origin"
+  branches:
+    -
+     name: "master"
+     path: ""
+    -
+     name: "gh-pages" # or *master* for user repository. eg: p2.github.io
+     path: "_site"
+
+############### RELATED ARTICLES ####################
+# if set to true print a list of related articles
+# on collection's articles
+printRelatedArticles: true
+
+# maximum number of related articles searched in each collection
+maxRelated : 5
+# minimum number of tag match to be a related
+minTagMatch: 4
 ############### COLLECTIONS ####################
 collections:
 
