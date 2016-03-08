@@ -27,16 +27,47 @@ When on a category index page, we also create :
   <div class="medium-10 large-8 medium-centered columns">
 
     <article>
-    <h1>{{ page.title }}</h1>
+    <h2>{{ page.title }}</h2>
       {% if page.date %}
           <p class="post-meta">{{ page.date | date_to_string }}</p>
       {% endif %}
-      <p class="post-content">
-
+      <div class="post-content">
         {{ content }}
-
-      </p>
+      </div>
     </article>
+
+    {% if page.related.size > 0 %}
+      {% assign sortedArticles = page.related | sort: "date" %}
+
+      <h3>Related articles</h3>
+      <ul>
+      {% for article in sortedArticles reversed %}
+
+        {% assign articleType = site.articleTypes | where: "slug", article.type | first %}
+
+        <li>
+          <a href="{{ site.baseurl }}{{ article.url }}">
+            <i class="{{ articleType.icon }}"></i> {{ article.title }}
+          </a>
+
+          {% assign currentCollectionSlug = article.collection %}
+          {% assign currentCollection = site.collections | where:'label',currentCollectionSlug | first %}
+          date: {{ article.date | date_to_string }} -
+          in {{ currentCollection.name }} collection -
+
+
+              {% assign matchingTags = "" | split:"/" %}
+              {% for t in article.tags %}
+                {% if page.tags contains t %}
+                  {% assign matchingTags = matchingTags | push: t %}
+                {% endif %}
+              {% endfor %}
+            matching on : <span>{{ matchingTags | join: ", " }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
 
   </div><!-- /.medium-10 large-8 medium-centered columns -->
 </div><!-- /.row -->
