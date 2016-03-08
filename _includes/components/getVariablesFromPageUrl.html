@@ -34,7 +34,7 @@ When on a category index page, we also create :
 {% if dirParts[2] != nil %}
 
     {% assign currentCategorySlug = dirParts[2] %}
-    {% capture currentCategoryIndexUrl %}{{ currentCollectionIndexUrl }}/{{ currentCategorySlug }}/{% endcapture %}
+    {% capture currentCategoryIndexUrl %}{{ currentCollectionIndexUrl }}{{ currentCategorySlug }}/{% endcapture %}
 
     {% assign currentCategoryDatas = currentCollection.categories | where: "slug", currentCategorySlug | first %}
 
