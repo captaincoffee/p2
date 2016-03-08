@@ -78,11 +78,16 @@ def create_elements( type = 'post', numberOf = 1, clean = false, collectionName 
       when "collection"
         tags          = get_tags()
         front["tags"] = tags
-        itemType          = types.sample(1).first
+        itemType      = types.sample(1).first
         front["type"] = itemType["slug"]
+        front["image_path"] = get_image()
     end
 
-    content = get_content( 4, 30 )
+    excerpt = get_content( 2, 15 )
+    excerpt_separator = $config['excerpt_separator']
+    body = get_content( 4, 30 )
+
+    content = "#{excerpt}\n#{excerpt_separator}\n#{body}"
 
     create_file(filenameFullPath, front, content)
     $elementCounter += 1

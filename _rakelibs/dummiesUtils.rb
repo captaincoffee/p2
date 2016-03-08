@@ -26,6 +26,16 @@ def get_tags( min = $minTagsPerItem, max = $maxTagsPerItem )
   return tags
 end
 
+def get_image
+  prng = Random.new
+  r = prng.rand(1...5)
+  if r > 2
+    "/assets/img/placeholder.jpg"
+  else
+    ""
+  end
+end
+
 def get_content( paraNumber = 2, paraLength = 20)
   prng = Random.new
   content = prng.rand(1...paraNumber).times.map do |c|
