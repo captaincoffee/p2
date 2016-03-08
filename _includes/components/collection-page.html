@@ -29,7 +29,7 @@ When on a category index page, we also create :
 
     {% comment %}Prints categories in the same order as collection.categories{% endcomment %}
     {% for category in currentCollection.categories %}
-        {% include components/printDocumentsForCategory.html category=category startHeaderLevel=2 %}
+        {% include components/printDocumentsForCategory.html category=category startHeaderLevel=2 printCategoryLink=true %}
     {% endfor %}
 
   </div><!-- /.medium-10 large-8 medium-centered columns -->

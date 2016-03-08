@@ -3,6 +3,10 @@
 {% if startHeaderLevel == nil %}
   {% assign startHeaderLevel = 1 %}
 {% endif %}
+{% assign printCategoryLink = include.printCategoryLink %}
+{% if printCategoryLink == nil %}
+  {% assign printCategoryLink = false %}
+{% endif %}
 
 {% assign h1 = startHeaderLevel %}
 {% assign h2 = h1 | plus: 1 %}
@@ -16,7 +20,14 @@
     {% if categoryDocs != nil %}
 
         {% capture categoryUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{{ category.slug }}/{% endcapture %}
-        <h{{ h1 }}><a href="{{ categoryUrl }}">{{ category.name }}</a></h{{ h1 }}>
+
+{% if printCategoryLink == true %}
+    <h{{ h1 }}><a href="{{ categoryUrl }}">{{ category.name }}</a></h{{ h1 }}>
+{% else %}
+    <h{{ h1 }}>{{ category.name }}</h{{ h1 }}>
+{% endif %}
+
+
 
         {% comment %}Sort category documents by type
         return an array  : [ {"name"=>"videos", "items"=>[#]},
@@ -31,6 +42,7 @@
         {% for typeInfos in site.articleTypes %}
             {% assign currentType = typeInfos.slug %}
             {% comment %}Get documents for currentType{% endcomment %}
+
             {% assign currentTypeDocs = byType | where: "name", currentType | first %}
             {% if currentTypeDocs != nil %}
                 {% capture targetId %}{{ category.slug }}-{{typeInfos.slug}}{% endcapture %}
@@ -42,7 +54,7 @@
                 {% endif %}
 
                 {% capture tab %}<li class="tabs-title {{activeClass}}">
-                <a href="#{{targetId}}"><i class="{{ typeInfos.icon }}"></i> {{ typeInfos.plural }}</a>
+                <a href="#{{targetId}}"><i class="{{ typeInfos.icon }}"></i> {{ typeInfos.plural }} ({{ currentTypeDocs.items.size }})</a>
                 </li>{% endcapture %}
 
                 {% assign tabsOutput = tabsOutput | push: tab %}
