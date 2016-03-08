@@ -3,20 +3,24 @@
 {% if startHeaderLevel == nil %}
   {% assign startHeaderLevel = 1 %}
 {% endif %}
-
+{% assign printCategoryLink = include.printCategoryLink %}
+{% if printCategoryLink == nil %}
+  {% assign printCategoryLink = false %}
+{% endif %}
 {% assign h1 = startHeaderLevel %}
 {% assign h2 = h1 | plus: 1 %}
-
     {% comment %}
     Look for docs in current listed Category
     returns a hash : {"name"=>"chip-seals", "items"=>[#, #]}
     {% endcomment %}
     {% assign categoryDocs = currentCollectionDocsByCategory | where: "name", category.slug | first %}
-
     {% if categoryDocs != nil %}
-
         {% capture categoryUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{{ category.slug }}/{% endcapture %}
-        <h{{ h1 }}><a href="{{ categoryUrl }}">{{ category.name }}</a></h{{ h1 }}>
+        {% if printCategoryLink == true %}
+            <h{{ h1 }}><a href="{{ categoryUrl }}">{{ category.name }}</a></h{{ h1 }}>
+        {% else %}
+            <h{{ h1 }}>{{ category.name }}</h{{ h1 }}>
+        {% endif %}
 
         {% comment %}Sort category documents by type
         return an array  : [ {"name"=>"videos", "items"=>[#]},
@@ -26,11 +30,11 @@
 
         {% assign tabsOutput = "" | split: "/" %}
         {% assign documentsOutput = "" | split: "/" %}
-
         {% comment %}Sorting documents by type in site.articleTypes order{% endcomment %}
         {% for typeInfos in site.articleTypes %}
             {% assign currentType = typeInfos.slug %}
             {% comment %}Get documents for currentType{% endcomment %}
+
             {% assign currentTypeDocs = byType | where: "name", currentType | first %}
             {% if currentTypeDocs != nil %}
                 {% capture targetId %}{{ category.slug }}-{{typeInfos.slug}}{% endcapture %}
@@ -42,7 +46,7 @@
                 {% endif %}
 
                 {% capture tab %}<li class="tabs-title {{activeClass}}">
-                <a href="#{{targetId}}"><i class="{{ typeInfos.icon }}"></i> {{ typeInfos.plural }}</a>
+                <a href="#{{targetId}}"><i class="{{ typeInfos.icon }}"></i> {{ typeInfos.plural }} ({{ currentTypeDocs.items.size }})</a>
                 </li>{% endcapture %}
 
                 {% assign tabsOutput = tabsOutput | push: tab %}
@@ -55,6 +59,10 @@
                                 {% if page.date %}
                                     <p>date : {{ doc.date | date: '%y/%m/%d %H:%M:%S' }}</p>
                                 {% endif %}
+                                {% if doc.content contains site.excerpt_separator %}
+                                {% assign splitted = doc.content | split: site.excerpt_separator %}
+                                {{ splitted[0] }}
+                                {% endif %}
                             </article>
                     {% endfor %}
                     </div>
@@ -64,19 +72,10 @@
 
             {% endif %}
         {% endfor %}
-
-        {% if byType.size > 1 %}
         <ul class="tabs" data-tabs id="{{ category.slug }}-documents">
         {% for tab in tabsOutput %}{{ tab }}{% endfor %}
         </ul>
-        {% endif %}
-
-        {% if byType.size > 1 %}
         <div class="tabs-content" data-tabs-content="documents">
         {% for doc in documentsOutput %}{{ doc }}{% endfor %}
         </div>
-        {% else %}
-        {% for doc in documentsOutput %}{{ doc }}{% endfor %}
-        {% endif %}
-
     {% endif %}
