@@ -38,11 +38,11 @@ $default_ext    = "md"
 $numberOfCategories = 30 # or less depending on collection's categories number
 
 ################  TAGS SETUP #####################
-$numberOfTags   = 50 # total number of tags - common to all collections
+$numberOfTags   = 20 # total number of tags - common to all collections
 $minTagsPerItem = 5  # minimum number of tag attributed to one article
 $maxTagsPerItem = 10 # maximum number of tag attributed to one article
 
-task :default => [:publish]
+task :default => [:list]
 
 desc "Creates dummy articles"
 task :dummy do
@@ -55,7 +55,7 @@ task :dummy do
         create_elements( 'collection', $articlesPerCollection, true, collectionName )
     end
 
-    create_elements( 'post', 3, true )
+    create_elements( 'post', 20, true )
 
     Rake::Task[:catpages].invoke
 
