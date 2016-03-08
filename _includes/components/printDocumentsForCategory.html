@@ -64,19 +64,10 @@
 
             {% endif %}
         {% endfor %}
-
-        {% if byType.size > 1 %}
         <ul class="tabs" data-tabs id="{{ category.slug }}-documents">
         {% for tab in tabsOutput %}{{ tab }}{% endfor %}
         </ul>
-        {% endif %}
-
-        {% if byType.size > 1 %}
         <div class="tabs-content" data-tabs-content="documents">
         {% for doc in documentsOutput %}{{ doc }}{% endfor %}
         </div>
-        {% else %}
-        {% for doc in documentsOutput %}{{ doc }}{% endfor %}
-        {% endif %}
-
     {% endif %}
