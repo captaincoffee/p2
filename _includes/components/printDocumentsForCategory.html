@@ -7,27 +7,20 @@
 {% if printCategoryLink == nil %}
   {% assign printCategoryLink = false %}
 {% endif %}
-
 {% assign h1 = startHeaderLevel %}
 {% assign h2 = h1 | plus: 1 %}
-
     {% comment %}
     Look for docs in current listed Category
     returns a hash : {"name"=>"chip-seals", "items"=>[#, #]}
     {% endcomment %}
     {% assign categoryDocs = currentCollectionDocsByCategory | where: "name", category.slug | first %}
-
     {% if categoryDocs != nil %}
-
         {% capture categoryUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{{ category.slug }}/{% endcapture %}
-
-{% if printCategoryLink == true %}
-    <h{{ h1 }}><a href="{{ categoryUrl }}">{{ category.name }}</a></h{{ h1 }}>
-{% else %}
-    <h{{ h1 }}>{{ category.name }}</h{{ h1 }}>
-{% endif %}
-
-
+        {% if printCategoryLink == true %}
+            <h{{ h1 }}><a href="{{ categoryUrl }}">{{ category.name }}</a></h{{ h1 }}>
+        {% else %}
+            <h{{ h1 }}>{{ category.name }}</h{{ h1 }}>
+        {% endif %}
 
         {% comment %}Sort category documents by type
         return an array  : [ {"name"=>"videos", "items"=>[#]},
@@ -37,7 +30,6 @@
 
         {% assign tabsOutput = "" | split: "/" %}
         {% assign documentsOutput = "" | split: "/" %}
-
         {% comment %}Sorting documents by type in site.articleTypes order{% endcomment %}
         {% for typeInfos in site.articleTypes %}
             {% assign currentType = typeInfos.slug %}
