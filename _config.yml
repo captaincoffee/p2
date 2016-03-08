@@ -9,7 +9,7 @@ google-verification:    ""
 # layouts:     ./_layouts
 include:      [
                 '.htaccess',
-                '_pages'
+                '.nojekyll'
               ]
 
 # exclude from the conversion and from sitemap.xml
