@@ -15,17 +15,15 @@ When on a category index page, we also create :
 {% endcomment %}
 {% include components/getVariablesFromPageUrl.html %}
 
-<nav aria-label="You are here:" role="navigation">
-  <ul class="breadcrumbs">
-    <li><a href="{{ site.baseurl}}/">Home</a></li>
-    <li>{{ currentCollection.name }}</li>
-  </ul>
-</nav>
-
 <div class="row">
   <div class="medium-10 large-8 medium-centered columns">
-
-  <h1>{{ currentCollection.name }}</h1>
+    <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+        <li><a href="{{ site.baseurl}}/">Home</a></li>
+        <li>{{ currentCollection.name }}</li>
+      </ul>
+    </nav>
+    <h1>{{ currentCollection.name }}</h1>
 
     {% comment %}Prints categories in the same order as collection.categories{% endcomment %}
     {% for category in currentCollection.categories %}
