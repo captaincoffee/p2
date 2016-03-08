@@ -49,8 +49,6 @@
               {% comment %}Sort collections articles by category{% endcomment %}
               {% assign byCategory = currentCollection.docs | group_by: 'category' %}
               <ul class="submenu menu vertical" data-submenu>
-                {% comment %}For Medium and small screen only{% endcomment %}
-                <li class="hide-for-large"><a href="{{ site.baseurl }}/{{ currentCollection.label }}" class="{{ categoryClass }}">All in {{ currentCollection.name }}</a></li>
                 {% comment %}Prints categories in the same order as collection.categories{% endcomment %}
                 {% for cat in currentCollection.categories %}
                   {% assign currentCat = cat.slug %}

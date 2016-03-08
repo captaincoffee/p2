@@ -9,7 +9,7 @@ google-verification:    ""
 # layouts:     ./_layouts
 include:      [
                 '.htaccess',
-                '.nojekyll'
+                '_pages'
               ]
 
 # exclude from the conversion and from sitemap.xml
@@ -46,6 +46,7 @@ gems:         [
 # limit_posts: 0
 # highlighter: pygments
 
+permalink: /news/:year/:title/
 paginate_path: '/news/page:num'
 paginate:      5
 
@@ -61,7 +62,7 @@ excerpt_separator: "<!--more-->"
 # host:        0.0.0.0
 # port:        4000
 # url:         ""
-baseurl:     "/p2"
+# baseurl:     ""
 # lsi:         false
 
 # maruku:
@@ -100,29 +101,6 @@ kramdown:
 
 permalink: pretty
 
-############### GITHUB ####################
-# Used by Rakefile to push code and generated pages to github pages
-github:
-  user:       "djacquel" # eg: toto
-  repository: "p2"   # eg: project-repo or p2.github.io
-  remoteName: "origin"
-  branches:
-    -
-     name: "master"
-     path: ""
-    -
-     name: "gh-pages" # or *master* for user repository. eg: p2.github.io
-     path: "_site"
-
-############### RELATED ARTICLES ####################
-# if set to true print a list of related articles
-# on collection's articles
-printRelatedArticles: true
-
-# maximum number of related articles searched in each collection
-maxRelated : 5
-# minimum number of tag match to be a related
-minTagMatch: 4
 ############### COLLECTIONS ####################
 collections:
 
@@ -188,7 +166,6 @@ collections:
       - { name: "Data Management", slug: "data-management" }
       - { name: "Training", slug: "training" }
 
-############### ARTICLES TYPES ####################
 # this array determine article's types and order
 # a collection article with non matching type will not be listed
 # article must be tagged with a type.slug
@@ -198,15 +175,11 @@ articleTypes :
   - { name: "Article", plural: "Articles", slug: "article", icon: "fi-page" }
   - { name: "Video", plural: "Videos", slug: "video", icon: "fi-video" }
   - { name: "Link", plural: "Links", slug: "link", icon: "fi-link" }
-  - { name: "Project report", plural: "Project reports", slug: "project", icon: "fi-page-search" }
-  - { name: "Research Study", plural: "Research studies", slug: "research", icon: "fi-compass" }
+  - { name: "Project", plural: "Projects", slug: "project", icon: "fi-page-search" }
+  - { name: "Research", plural: "Research", slug: "research", icon: "fi-compass" }
 
 ############### DEFAULT CONFIGURATION ####################
 defaults:
-
-  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/" } }
-
-
   - { scope: { type: "pages" }, values: { layout: "default" } }
 
   # default layout for collections articles
