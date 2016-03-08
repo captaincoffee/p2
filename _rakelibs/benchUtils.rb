@@ -45,7 +45,7 @@ def get_stdin(message)
   STDIN.gets.chomp
 end
 
-def ask(message, valid_options)
+def ask(message, valid_options=nil)
   if valid_options
     answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
   else

@@ -20,6 +20,22 @@ def githubCheckSetup(branch, githubConfig)
     isOnRightBranch = isOnRightBranch?(branchPath, branch)
 end
 
+def githubPublish(branch, githubConfig)
+  branchPath = getBranchPath(branch)
+  # stage all files to commit
+  g = Git.open(branchPath)
+  g.add(:all=>true)
+  # ask user for a commit message
+  commitMsg = ask("Commit message for branch #{branch['name']}: ")
+  if commitMsg == ''
+    commitMsg = "Code update #{Time.now.utc}"
+  end
+  # commit
+  g.commit_all(commitMsg)
+  # push
+  g.push(githubConfig['remoteName'], branch['name'])
+end
+
 # returns full path for a given branch
 def getBranchPath( branch )
   path = "#{$rootPath}/#{branch['path']}"
@@ -75,7 +91,7 @@ end
 def isOnRightBranch?(path, branch)
   d2("Testing branch for #{path}")
   g = Git.open(path)
-  branchName = g.branch.name
+  branchName = g.branch(branch['name'])
   d2("Current branch on #{path} is #{branchName}")
   targetName = branch["name"]
   d2("target name is #{targetName}")
@@ -91,11 +107,10 @@ def isOnRightBranch?(path, branch)
     # d2("g.branch(targetName) #{branchName}")
     # d2("g.checkout(branchName) #{checkout}")
 
-    # so for now we use a direcct system call
+    # so for now we use a direct system call
     cd "#{path}" do
       branchCreated = system "git checkout -b #{targetName}"
       d2("Checked out #{targetName} branch (result code : #{branchCreated})")
     end
   end
 end
-

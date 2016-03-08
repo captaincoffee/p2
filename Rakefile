@@ -42,7 +42,7 @@ $numberOfTags   = 50 # total number of tags - common to all collections
 $minTagsPerItem = 5  # minimum number of tag attributed to one article
 $maxTagsPerItem = 10 # maximum number of tag attributed to one article
 
-task :default => [:checkGithub]
+task :default => [:publish]
 
 desc "Creates dummy articles"
 task :dummy do
@@ -98,18 +98,18 @@ task :checkGithub do
     end
 end
 
-desc "Publish your work"
+desc "Publish your work in code and site's branches"
 task :publish do
-  # Work In Progress
-
+  # build site
+  Rake::Task[:build].invoke
   # check git config
-
-  # even if already done by checkGithub
-  # secure branches path
-
-  # ask user for a commit message
-
-  # commit both branches
+  Rake::Task[:checkGithub].invoke
+  # publish both branches
+  githubConfig = githubGetConfig
+  branches     = githubConfig['branches']
+  branches.each do |branch|
+    githubPublish(branch, githubConfig)
+  end
 end
 
 desc "list tasks"
