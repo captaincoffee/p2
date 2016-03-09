@@ -89,9 +89,8 @@ h1 {
     margin: 0 1em;	}
 }
 
-.front_post_list {
+.front_post_list li{
   list-style: none;
-  margin: 0;
 }
 
 // Google Calendar and such
@@ -156,8 +155,7 @@ code {
 footer {
 	background-color: #444;
 	color: #eee;
-	margin: 3em 0 2em 0;
-  padding: 0 0 2em 0;
+	padding: 0 0 2em 0;
 	width: 100%;
 }
 
