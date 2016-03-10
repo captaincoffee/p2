@@ -100,23 +100,36 @@ end
 
 def create_categories_pages( collectionName )
   d2("## Creating Categories pages for #{collectionName}")
+
+  # get collections datas
+  $config = YAML::load_file($configPath)
+  collectionDatas = $config["collections"][collectionName]
+  collectionCategories = collectionDatas["categories"]
+
   # get folder list in "_#{collectionName}"
   folders = Dir.entries("_#{collectionName}").reject{|entry| [".", ".."].include?(entry) }
-  d2("Listed categories folders #{folders}")
+  d1("Listed categories folders #{folders}")
+
   # work early with absolute path
   collectionFolderFullPath = File.join($rootPath, collectionName)
-  d2("Working in #{collectionFolderFullPath}")
+  d1("Working in #{collectionFolderFullPath}")
   # check for path validity
   inRootPath?($rootPath, collectionFolderFullPath)
+
   # for each folder
   categoriesCount = 0
   folders.each do |folder|
+    d2("--------------> folder #{folder}")
     categoryPageFullPath = "#{collectionFolderFullPath}/#{folder}.html"
     if !File.exist?(categoryPageFullPath)
       d1("categoryPageFullPath #{categoryPageFullPath} doesn't exists create it !")
       categoriesCount += 1
+      categoryDatas = collectionCategories.select{|cat| cat["slug"]==folder }.first
+      pageTitle = "#{collectionDatas['name']} - #{categoryDatas['name']}"
+      d2("pageTitle #{pageTitle}")
       open(categoryPageFullPath, 'w') do |f|
         f.puts "---"
+        f.puts "title: #{pageTitle} "
         f.puts "---"
         f.puts "{% include components/category-page.html %}"
       end
