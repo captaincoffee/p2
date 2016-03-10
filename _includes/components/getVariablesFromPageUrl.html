@@ -17,14 +17,7 @@ When on a category index page, we also create :
 {% assign dirParts = page.url | split: "/"  %}
 {% assign currentCollectionSlug = dirParts[1] %}
 
-{% comment %}Jekyll 2/3 compatibility trick - see https://github.com/jekyll/jekyll/issues/4392{% endcomment %}
-{% assign versionMajor = jekyll.version | split: "." | first %}
-{% case versionMajor %}
-  {% when '2' %}
-    {% assign currentCollection = site.collections[currentCollectionSlug] %}
-  {% when '3' %}
-    {% assign currentCollection = site.collections | where:'label',currentCollectionSlug | first %}
-{% endcase %}
+{% assign currentCollection = site.collections | where:'label',currentCollectionSlug | first %}
 
 {% capture currentCollectionIndexUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{% endcapture %}
 
