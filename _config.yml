@@ -31,7 +31,8 @@ exclude:      [
                 'assets/vendor/*.scss',
                 'assets/scss/*.scss',
                 'assets/js/app.js',
-                'assets/js/all.js'
+                'assets/js/all.js',
+                'Rakefile'
               ]
 # keep_files:  ['.git','.svn']
 gems:         [
@@ -204,8 +205,7 @@ articleTypes :
 ############### DEFAULT CONFIGURATION ####################
 defaults:
 
-  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/" } }
-
+  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/", layout: "post"} }
 
   - { scope: { type: "pages" }, values: { layout: "default" } }
 
