@@ -39,7 +39,7 @@ gems:         [
                 'jekyll-sitemap',
                 'jekyll-paginate'
               ]
-# timezone:    nil
+timezone: America/New_York
 # encoding:    nil
 
 # future:      true
