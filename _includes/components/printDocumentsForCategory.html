@@ -57,7 +57,7 @@
                             <article>
                                 <h{{ h2 }}><a href="{{ site.baseurl }}{{ doc.url }}"><i class="{{ typeInfos.icon }}"></i> {{ doc.title }}</a></h{{ h2 }}>
                                 {% if page.date %}
-                                    <p>date : {{ doc.date | date: '%y/%m/%d %H:%M:%S' }}</p>
+                                    <p>date : {{ doc.date | date: '%y/%m/%d' }}</p>
                                 {% endif %}
                                 {% if doc.content contains site.excerpt_separator %}
                                 {% assign splitted = doc.content | split: site.excerpt_separator %}

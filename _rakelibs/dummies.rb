@@ -65,17 +65,16 @@ def create_elements( type = 'post', numberOf = 1, clean = false, collectionName 
     filenameFullPath = "#{fileFullPath}/#{filename}"
 
     front = {
-      'title' => "#{title.gsub(/&/,'&amp;')}",
-      'date'  => "#{date.strftime('%Y-%m-%d %H:%M:%S %:z')}"
+      'title' => "#{title.gsub(/&/,'&amp;')}"
     }
 
     case type
       when "post"
-        tags = get_tags()
-        front["tags"] = tags
+        #
       when "page"
         #
       when "collection"
+        front["date"] = "#{date.strftime('%Y-%m-%d')}"
         tags          = get_tags()
         front["tags"] = tags
         itemType      = types.sample(1).first
