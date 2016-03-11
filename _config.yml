@@ -31,14 +31,15 @@ exclude:      [
                 'assets/vendor/*.scss',
                 'assets/scss/*.scss',
                 'assets/js/app.js',
-                'assets/js/all.js'
+                'assets/js/all.js',
+                'Rakefile'
               ]
 # keep_files:  ['.git','.svn']
 gems:         [
                 'jekyll-sitemap',
                 'jekyll-paginate'
               ]
-# timezone:    nil
+timezone: America/New_York
 # encoding:    nil
 
 # future:      true
@@ -111,7 +112,7 @@ github:
      name: "master"
      path: ""
     -
-     name: "gh-pages" # or *master* for user repository. eg: p2.github.io
+     name: "gh-pages" # or *master* for user/organisation repository. eg: p2.github.io
      path: "_site"
 
 ############### RELATED ARTICLES ####################
@@ -204,8 +205,7 @@ articleTypes :
 ############### DEFAULT CONFIGURATION ####################
 defaults:
 
-  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/" } }
-
+  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/", layout: "post"} }
 
   - { scope: { type: "pages" }, values: { layout: "default" } }
 

@@ -1,27 +1,24 @@
 ---
 permalink: /
 layout: home
-title: Latest News
+title: Home
 ---
 <div class="row">
   <div class="medium-8 large-9 columns">
-
     <ul class="front_post_list">
       {% for post in site.posts limit: 6 %}
         <li>
-          <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+          <a href="{{ site.baseurl }}{{ post.url }}"><h3>{{ post.title }}</h3></a>
           {{ post.excerpt }}
         </li>
       {% endfor %}
     </ul>
-
   </div><!-- /.medium-8 large-9 columns -->
 
   <div class="medium-4 large-3 columns">
     <h3>Upcoming Events</h3>
     {% include event-sidebar.html %}
     <p><a href="{{site.baseurl}}/events/">Find All Upcoming Events</a></li>
-
   </div><!-- /.medium-4 large-3 columns -->
 
 </div><!-- /.row -->
