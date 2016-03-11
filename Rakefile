@@ -36,9 +36,6 @@ end
 
 desc "Publish your work in code and site's branches"
 task :publish do
-  # check if we need to crete categories pages
-  Rake::Task[:catpages].invoke
-
   # build site
   Rake::Task[:build].invoke
 
@@ -54,12 +51,15 @@ end
 
 desc "Serve site locally"
 task :serve do
+  # check if we need to create categories pages
+  Rake::Task[:catpages].invoke
   system "bundle exec jekyll serve --trace"
 end
 
 desc "Build jekyll site"
 task :build do
-#  system "bundle exec jekyll build --profile"
+  # check if we need to create categories pages
+  Rake::Task[:catpages].invoke
   system "bundle exec jekyll build --trace"
 end
 
