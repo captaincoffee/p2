@@ -112,7 +112,7 @@ github:
      name: "master"
      path: ""
     -
-     name: "gh-pages" # or *master* for user repository. eg: p2.github.io
+     name: "gh-pages" # or *master* for user/organisation repository. eg: p2.github.io
      path: "_site"
 
 ############### RELATED ARTICLES ####################

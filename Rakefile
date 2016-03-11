@@ -5,11 +5,10 @@ require 'git' # code https://github.com/schacon/ruby-git
 
 require_relative '_rakelibs/libs.rb'
 
-$debug1 = false
-$debug2 = true
+$debug = true
 
 $rootPath = __dir__
-d1("Current directory : #{$rootPath}")
+d("Current directory : #{$rootPath}")
 
 $configPath = File.join($rootPath, '_config.yml')
 
@@ -39,6 +38,7 @@ desc "Publish your work in code and site's branches"
 task :publish do
   # check if we need to crete categories pages
   Rake::Task[:catpages].invoke
+
   # build site
   Rake::Task[:build].invoke
 

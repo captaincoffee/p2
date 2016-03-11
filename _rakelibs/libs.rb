@@ -82,10 +82,10 @@ end
 # if not ask user if we init one
 def isGitRepo?( path )
   begin
-    d1("Checking if #{path} is a git repo")
+    d("Checking if #{path} is a git repo")
     repo = Git.open(path)
   rescue => e
-    d1("No initialized git repository in #{path} : #{e}")
+    d("No initialized git repository in #{path} : #{e}")
     abort("rake aborted!") if ask("Do you want to initialize a new git repository in #{path} ?", ['y', 'n']) == 'n'
     repo = Git.init(path)
   end
@@ -99,22 +99,22 @@ end
 # if remote is not ok, ask user if we set the right one
 # BEWARE ! If an *origin* remote exists, it is removed !
 def asCorrectRemote?(path, githubConfig)
-  d1("Testing remote for #{path}")
+  d("Testing remote for #{path}")
   targetUrl = "git@github.com:#{githubConfig['user']}/#{githubConfig['repository']}.git"
-  d1("Target url is #{targetUrl}")
+  d("Target url is #{targetUrl}")
   g = Git.open(path)
   remoteUrl = g.remote(githubConfig['remoteName']).url
-  d1("g.remote(#{githubConfig['remoteName']}).url #{remoteUrl}")
+  d("g.remote(#{githubConfig['remoteName']}).url #{remoteUrl}")
   targetUrl = "git@github.com:#{githubConfig['user']}/#{githubConfig['repository']}.git"
 
   if remoteUrl == targetUrl
     remoteUrl
   elsif !remoteUrl
-    d1("++++++ Not remote set for #{githubConfig['remoteName']}")
+    d("++++++ Not remote set for #{githubConfig['remoteName']}")
     abort("rake aborted!") if ask("Do you want to set remote to **#{githubConfig['remoteName']} #{targetUrl}** ?", ['y', 'n']) == 'n'
     remote = g.add_remote(githubConfig['remoteName'], targetUrl)
   else
-    d1("++++++ Remote #{githubConfig['remoteName']} ALREADY set with url #{remoteUrl}")
+    d("++++++ Remote #{githubConfig['remoteName']} ALREADY set with url #{remoteUrl}")
     abort("rake aborted!") if ask("Do you want to replace remote to **#{githubConfig['remoteName']} #{targetUrl}** ?", ['y', 'n']) == 'n'
     g.remote(githubConfig['remoteName']).remove
     remote = g.add_remote(githubConfig['remoteName'], targetUrl)
@@ -124,12 +124,12 @@ end
 # Check if out two branches are on the right branches
 # see _config.yml - github variables for setup
 def isOnRightBranch?(path, branch)
-  d2("Testing branch for #{path}")
+  d("Testing branch for #{path}")
   g = Git.open(path)
   branchName = g.branch(branch['name'])
-  d2("Current branch on #{path} is #{branchName}")
+  d("Current branch on #{path} is #{branchName}")
   targetName = branch["name"]
-  d2("target name is #{targetName}")
+  d("target name is #{targetName}")
 
   if branchName == targetName
     branchName
@@ -139,13 +139,13 @@ def isOnRightBranch?(path, branch)
     # It seems that there is a bug for branch creation / checkout
     # branchName = g.branch(targetName).create
     # checkout = g.branch(branchName).checkout
-    # d2("g.branch(targetName) #{branchName}")
-    # d2("g.checkout(branchName) #{checkout}")
+    # d("g.branch(targetName) #{branchName}")
+    # d("g.checkout(branchName) #{checkout}")
 
     # so for now we use a direct system call
     cd "#{path}" do
       branchCreated = system "git checkout -b #{targetName}"
-      d2("Checked out #{targetName} branch (result code : #{branchCreated})")
+      d("Checked out #{targetName} branch (result code : #{branchCreated})")
     end
   end
 end
@@ -180,14 +180,9 @@ end
 
 
 # debug
-def d1(msg)
-  if $debug1 == true
+def d(msg)
+  if $debug == true
     puts msg
   end
 end
 
-def d2(msg)
-  if $debug2 == true
-    puts msg
-  end
-end
