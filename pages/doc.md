@@ -60,6 +60,7 @@ For our **methods** collection we have a methods/index.html page.
 {% highlight yaml %}
 {% raw %}
 ---
+title: Methods
 ---
 {% include components/collection-page.html %}
 {% endraw %}
@@ -121,10 +122,51 @@ Create `methods/fog-seals.md` page containing :
 {% highlight yaml %}
 {% raw %}
 ---
+title: Methods - Fog seals
 ---
 {% include components/category-page.html %}
 {% endraw %}
 {% endhighlight %}
+
+## Creating an article
+
+You can find a sample article at `_samples/article.md`.
+Open it and `save as` in the right path.
+
+Example : for a `Methods > Fog Seals > New Method` article, you save it as
+`_methods/fog-seals/new-method.md`
+
+Articles metadatas are in the front matter.
+
+  - title
+  - date : use `YYYY-MM-DD` format and NOT `YYYY-MM-DD HH:MM:SS`
+  - tags : tags are used to propose related articles. You can provide from 5 to 20 tags for an article. Use business words (truck, cement, seal).
+
+```
+tags :
+  - tag one
+  - tag two
+
+or
+
+tags: [tag one, tag two]
+```
+  - type : type can be "article", "video", "link", project" or "research"
+  - image_path : path to article image. Leave empty is no image.
+
+## Publishing to github
+
+You can control your site locally with `rake serve`.
+
+Publish with `rake publish`. Before that, you must configure the `github` key in `_config.yml`
+
+It will :
+
+  - check if we need to create new category page
+  - build the site
+  - check if git setup is correct
+  - publish code in master
+  - publish site in gh-pages (note: this must be changed for user/org repository)
 
 {% endcapture %}
 
