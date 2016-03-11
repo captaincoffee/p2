@@ -1,3 +1,38 @@
+
+def create_categories_pages( collectionName )
+  # get collections datas
+  $config = YAML::load_file($configPath)
+  collectionDatas = $config["collections"][collectionName]
+  collectionCategories = collectionDatas["categories"]
+  # get folder list in "_#{collectionName}"
+  folders = Dir.entries("_#{collectionName}").reject{|entry| [".", ".."].include?(entry) }
+  # work early with absolute path
+  collectionFolderFullPath = File.join($rootPath, collectionName)
+  # check for path validity
+  inRootPath?($rootPath, collectionFolderFullPath)
+  # for each folder
+  folders.each do |folder|
+    categoryPageFullPath = "#{collectionFolderFullPath}/#{folder}.html"
+    if !File.exist?(categoryPageFullPath)
+      categoryDatas = collectionCategories.select{|cat| cat["slug"]==folder }.first
+      pageTitle = "#{collectionDatas['name']} - #{categoryDatas['name']}"
+      front = {'title' => pageTitle}
+      content = "{% include components/category-page.html %}"
+      create_file(categoryPageFullPath, front, content)
+    end
+  end
+end
+
+def create_file(filename, front, content)
+  open(filename, 'w') do |f|
+    f.puts "---"
+    front.each{ |key,value| f.puts "#{key}: #{value}" }
+    f.puts "---"
+    f.puts ""
+    f.puts content
+  end
+end
+
 # Get github config from jekyll *_config.yml* file
 def githubGetConfig
   @config = YAML::load_file($configPath)
@@ -112,5 +147,47 @@ def isOnRightBranch?(path, branch)
       branchCreated = system "git checkout -b #{targetName}"
       d2("Checked out #{targetName} branch (result code : #{branchCreated})")
     end
+  end
+end
+
+
+# ensure that a folder/file is in the project path and exists
+# root and target must be full path
+def child?(root, target)
+  isChild = File.exist?(target) && inRootPath?(root, target)
+end
+
+# ensure a target folder/file in in root path
+def inRootPath?(root, targetFullPath)
+  inRootPath = File.realpath(targetFullPath).start_with?(root)
+  raise "NOT IN ROOT PATH" if !inRootPath
+  inRootPath
+end
+
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
+
+def ask(message, valid_options=nil)
+  if valid_options
+    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
+  else
+    answer = get_stdin(message)
+  end
+  answer
+end
+
+
+# debug
+def d1(msg)
+  if $debug1 == true
+    puts msg
+  end
+end
+
+def d2(msg)
+  if $debug2 == true
+    puts msg
   end
 end
