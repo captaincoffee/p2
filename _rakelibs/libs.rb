@@ -178,6 +178,7 @@ def ask(message, valid_options=nil)
   answer
 end
 
+
 # debug
 def d1(msg)
   if $debug1 == true

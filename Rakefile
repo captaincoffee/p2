@@ -37,8 +37,11 @@ end
 
 desc "Publish your work in code and site's branches"
 task :publish do
+  # check if we need to crete categories pages
+  Rake::Task[:catpages].invoke
   # build site
   Rake::Task[:build].invoke
+
   # check git config
   Rake::Task[:checkGithub].invoke
   # publish both branches
