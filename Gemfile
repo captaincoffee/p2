@@ -6,5 +6,6 @@ source "https://rubygems.org"
 gem 'github-pages'
 
 # used by Rake tasks
+gem 'rake'
 gem 'stringex'
 gem 'git'
