@@ -104,7 +104,7 @@ permalink: pretty
 ############### GITHUB ####################
 # Used by Rakefile to push code and generated pages to github pages
 github:
-  user:       "djacquel" # eg: toto
+  user:       "captaincoffee" # eg: toto
   repository: "p2"   # eg: project-repo or p2.github.io
   remoteName: "origin"
   branches:
