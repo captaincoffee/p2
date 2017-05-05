@@ -1,0 +1,34 @@
+{% comment %}
+Deriving useful variables from page.url
+ - currentCollectionSlug : string current collection slug
+ - currentCollection : jekyll:collection current collection
+ - currentCollectionIndexUrl : string url for current collection
+ - currentCollectionDocsByCategory : array current collection documents sorted by category
+   returns : [ {"name"=>"chip-seals", "items"=>[#, #]},
+               {"name"=>"crack-joint-treatments", "items"=>[#]},
+               {"name"=>"microsurfacing-slurry", "items"=>[#]} ]
+
+When on a category index page, we also create :
+ - currentCategorySlug : string current category slug
+ - currentCategoryDatas : array { name: "Safety", slug: "safety" }
+ - currentCategoryIndexUrl : string url for current category
+{% endcomment %}
+
+{% assign dirParts = page.url | split: "/"  %}
+{% assign currentCollectionSlug = dirParts[1] %}
+
+{% assign currentCollection = site.collections | where:'label',currentCollectionSlug | first %}
+
+{% capture currentCollectionIndexUrl %}{{ site.baseurl }}/{{ currentCollection.label }}/{% endcapture %}
+
+{% assign currentCollectionDocsByCategory = currentCollection.docs | group_by: 'category' %}
+
+{% comment %}Are we on a category page{% endcomment %}
+{% if dirParts[2] != nil %}
+
+    {% assign currentCategorySlug = dirParts[2] %}
+    {% capture currentCategoryIndexUrl %}{{ currentCollectionIndexUrl }}{{ currentCategorySlug }}/{% endcapture %}
+
+    {% assign currentCategoryDatas = currentCollection.categories | where: "slug", currentCategorySlug | first %}
+
+{% endif %}

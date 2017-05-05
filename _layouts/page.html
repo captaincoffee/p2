@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="row ptitle">
+  <h1>{{ page.title }}</h1>
+  {% if page.date %}
+      <p class="post-meta">
+      {{ page.date | date_to_string }}
+      </p>
+  {% endif %}
+</div><!-- /.row -->
+
+<div class="row">
+  <div class="medium-10 large-8 medium-centered columns">
+
+    <article>
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+
+  </div><!-- /.medium-10 large-8 medium-centered columns -->
+</div><!-- /.row -->

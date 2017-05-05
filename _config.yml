@@ -1,0 +1,263 @@
+language:               ""
+title:                  "Pavement Preservation"
+description:            "Resource for Practicing Professionals"
+google-verification:    ""
+
+# source:      .
+# destination: ./_site
+# plugins:     ./_plugins
+# layouts:     ./_layouts
+include:      [
+                '.htaccess',
+                '.nojekyll'
+              ]
+
+# exclude from the conversion and from sitemap.xml
+exclude:      [
+                'node_modules',
+                'npm-debug.log',
+                'package.json',
+                'bower.json',
+                'gulpfile.js',
+                'Makefile',
+                'composer.json',
+                'composer.lock',
+                'README.md',
+                'Gemfile',
+                'Gemfile.lock',
+                'assets/vendor/foundation-icon-fonts/*.html',
+                'assets/vendor/phpmailer/**/*.html',
+                'assets/vendor/what-input/*.html',
+                'assets/vendor/*.scss',
+                'assets/scss/*.scss',
+                'assets/js/app.js',
+                'assets/js/all.js',
+                'Rakefile'
+              ]
+# keep_files:  ['.git','.svn']
+gems:         [
+                'jekyll-sitemap',
+                'jekyll-paginate'
+              ]
+timezone: America/New_York
+# encoding:    nil
+
+# future:      true
+# show_drafts: false
+# limit_posts: 0
+# highlighter: pygments
+
+paginate_path: '/news/page:num'
+paginate:      5
+
+# markdown:      kramdown
+# markdown_ext:  markdown,mkdown,mkdn,mkd,md
+# textile_ext:   textile
+
+excerpt_separator: "<!--more-->"
+
+# safe:        false
+# watch:       false    # deprecated
+# server:      false    # deprecated
+# host:        0.0.0.0
+# port:        4000
+# url:         ""
+baseurl:     "/p2"
+# lsi:         false
+
+# maruku:
+#   use_tex:    false
+#   use_divs:   false
+#   png_engine: blahtex
+#   png_dir:    images/latex
+#   png_url:    /images/latex
+#   fenced_code_blocks: true
+
+# rdiscount:
+#   extensions: []
+
+# redcarpet:
+#   extensions: []
+
+kramdown:
+#   auto_ids: true
+#   footnote_nr: 1
+#   entity_output: as_char
+#   toc_levels: 1..6
+#   smart_quotes: lsquo,rsquo,ldquo,rdquo
+#   use_coderay: false
+    parse_block_html: true
+    parse_span_html: true
+#   coderay:
+#     coderay_wrap: div
+#     coderay_line_numbers: inline
+#     coderay_line_numbers_start: 1
+#     coderay_tab_width: 4
+#     coderay_bold_every: 10
+#     coderay_css: style
+
+# redcloth:
+#   hard_breaks: true
+
+permalink: pretty
+
+############### GITHUB ####################
+# Used by Rakefile to push code and generated pages to github pages
+github:
+  user:       "captaincoffee" # eg: toto
+  repository: "p2"   # eg: project-repo or p2.github.io
+  remoteName: "origin"
+  branches:
+    -
+     name: "master"
+     path: ""
+    -
+     name: "gh-pages" # or *master* for user/organisation repository. eg: p2.github.io
+     path: "_site"
+
+############### RELATED ARTICLES ####################
+# if set to true print a list of related articles
+# on collection's articles
+printRelatedArticles: true
+
+# maximum number of related articles searched in each collection
+maxRelated : 4
+# minimum number of tag match to be a related
+minTagMatch: 4
+############### COLLECTIONS ####################
+collections:
+
+  methods:
+    output: true   # every page in the collection will be created
+    isKB: true     # is part of Knowledge base
+    name: "Methods" # Print name used in titles, menus, ...
+    categories:
+      - { name: "Fog Seals", slug: "fog-seals" }
+      - { name: "Chip Seals", slug: "chip-seals" }
+      - { name: "Spray Seals", slug: "spray-seals" }
+      - { name: "Microsurfacing & Slurry", slug: "microsurfacing-and-slurry" }
+      - { name: "Combination Seals", slug: "combination-seals" }
+      - { name: "Cold-Mix Asphalt", slug: "cold-mix-asphalt" }
+      - { name: "Warm-Mix Asphalt", slug: "warm-mix-asphalt" }
+      - { name: "Asphalt Overlays", slug: "asphalt-overlays" }
+      - { name: "Recycling - Plant", slug: "recycling-plant" }
+      - { name: "Recycling - In-Place", slug: "recycling-in-place" }
+      - { name: "Crack & Joint Treatments", slug: "crack-joint-treatments" }
+      - { name: "Concrete Overlays", slug: "concrete-overlays" }
+      - { name: "Concrete Treatment", slug: "concrete-treatment" }
+      - { name: "Patching & Preparation", slug: "patching-preparation" }
+      - { name: "Milling & Grinding", slug: "milling-and-grinding" }
+
+  materials:
+    output: true
+    isKB: true
+    name: Materials
+    categories:
+      - { name: "Aggregates", slug: "aggregates" }
+      - { name: "Asphalt Emulsions", slug: "asphalt-emulsions" }
+      - { name: "Modified Emulsions", slug: "modified-emulsions" }
+      - { name: "Rejuvenators and Recycling Agents", slug: "rejuvenators-and-recycling-agents" }
+      - { name: "Asphalt Binders", slug: "asphalt-binders" }
+      - { name: "Modified Binders", slug: "modified-binders" }
+      - { name: "Asphalt Modification", slug: "asphalt-modification" }
+      - { name: "GTR", slug: "gtr" }
+      - { name: "Polymers", slug: "polymers" }
+      - { name: "Moisture Damage Control", slug: "moisture-damage-control" }
+      - { name: "Asphalt Additives", slug: "asphalt-additives" }
+      - { name: "Mixture Additives", slug: "mixture-additives" }
+      - { name: "Fibers", slug: "fibers" }
+      - { name: "RAP", slug: "rap" }
+      - { name: "RAS", slug: "ras" }
+      - { name: "Other Recycled Materials", slug: "other-recycled-materials" }
+      - { name: "Cement", slug: "cement" }
+      - { name: "Concrete Additives", slug: "concrete-additives" }
+
+  manage:
+    output: true
+    isKB: true
+    name: Manage
+    categories:
+      - { name: "Safety", slug: "safety" }
+      - { name: "Policy", slug: "policy" }
+      - { name: "Strategy", slug: "strategy" }
+      - { name: "Pavement Management Systems", slug: "pavement-management-systems" }
+      - { name: "Specifications", slug: "specifications" }
+      - { name: "Tests", slug: "tests" }
+      - { name: "Quality Control & Assurance", slug: "quality-control-assurance" }
+      - { name: "Research", slug: "research" }
+      - { name: "Life Cycle Cost Analysis", slug: "life-cycle-cost-analysis" }
+      - { name: "Data Management", slug: "data-management" }
+      - { name: "Training", slug: "training" }
+
+############### ARTICLES TYPES ####################
+# this array determine article's types and order
+# a collection article with non matching type will not be listed
+# article must be tagged with a type.slug
+# eg : "type: article" or "type: research"
+
+articleTypes :
+  - { name: "Article", plural: "Articles", slug: "article", icon: "fi-page" }
+  - { name: "Video", plural: "Videos", slug: "video", icon: "fi-video" }
+  - { name: "Link", plural: "Links", slug: "link", icon: "fi-link" }
+  - { name: "Project report", plural: "Project reports", slug: "project", icon: "fi-page-search" }
+  - { name: "Research Study", plural: "Research studies", slug: "research", icon: "fi-compass" }
+
+############### DEFAULT CONFIGURATION ####################
+defaults:
+
+  - { scope: { type: "posts" }, values: { permalink: "/news/:year/:title/", layout: "post"} }
+
+  - { scope: { type: "pages" }, values: { layout: "default" } }
+
+  # default layout for collections articles
+  - { scope: { type: "methods" }, values: { layout: "collection" } }
+  - { scope: { type: "materials" }, values: { layout: "collection" } }
+  - { scope: { type: "manage" }, values: { layout: "collection" } }
+
+  # assign a default category to any item in a given folder
+  - { scope: { path: "methods/fog-seals" }, values:  { category: "fog-seals" } }
+  - { scope: { path: "methods/chip-seals" }, values:  { category: "chip-seals" } }
+  - { scope: { path: "methods/spray-seals" }, values:  { category: "spray-seals" } }
+  - { scope: { path: "methods/microsurfacing-and-slurry" }, values:  { category: "microsurfacing-and-slurry" } }
+  - { scope: { path: "methods/combination-seals" }, values:  { category: "combination-seals" } }
+  - { scope: { path: "methods/cold-mix-asphalt" }, values:  { category: "cold-mix-asphalt" } }
+  - { scope: { path: "methods/warm-mix-asphalt" }, values:  { category: "warm-mix-asphalt" } }
+  - { scope: { path: "methods/asphalt-overlays" }, values:  { category: "asphalt-overlays" } }
+  - { scope: { path: "methods/recycling-plant" }, values:  { category: "recycling-plant" } }
+  - { scope: { path: "methods/recycling-in-place" }, values:  { category: "recycling-in-place" } }
+  - { scope: { path: "methods/crack-joint-treatments" }, values:  { category: "crack-joint-treatments" } }
+  - { scope: { path: "methods/concrete-overlays" }, values:  { category: "concrete-overlays" } }
+  - { scope: { path: "methods/concrete-treatment" }, values:  { category: "concrete-treatment" } }
+  - { scope: { path: "methods/patching-preparation" }, values:  { category: "patching-preparation" } }
+  - { scope: { path: "methods/milling-and-grinding" }, values:  { category: "milling-and-grinding" } }
+
+  - { scope: { path: "materials/aggregates" }, values:  { category: "aggregates" } }
+  - { scope: { path: "materials/asphalt-emulsions" }, values:  { category: "asphalt-emulsions" } }
+  - { scope: { path: "materials/modified-emulsions" }, values:  { category: "modified-emulsions" } }
+  - { scope: { path: "materials/rejuvenators-and-recycling-agents" }, values:  { category: "rejuvenators-and-recycling-agents" } }
+  - { scope: { path: "materials/asphalt-binders" }, values:  { category: "asphalt-binders" } }
+  - { scope: { path: "materials/modified-binders" }, values:  { category: "modified-binders" } }
+  - { scope: { path: "materials/asphalt-modification" }, values:  { category: "asphalt-modification" } }
+  - { scope: { path: "materials/gtr" }, values:  { category: "gtr" } }
+  - { scope: { path: "materials/polymers" }, values:  { category: "polymers" } }
+  - { scope: { path: "materials/moisture-damage-control" }, values:  { category: "moisture-damage-control" } }
+  - { scope: { path: "materials/asphalt-additives" }, values:  { category: "asphalt-additives" } }
+  - { scope: { path: "materials/mixture-additives" }, values:  { category: "mixture-additives" } }
+  - { scope: { path: "materials/fibers" }, values:  { category: "fibers" } }
+  - { scope: { path: "materials/rap" }, values:  { category: "rap" } }
+  - { scope: { path: "materials/ras" }, values:  { category: "ras" } }
+  - { scope: { path: "materials/other-recycled-materials" }, values:  { category: "other-recycled-materials" } }
+  - { scope: { path: "materials/cement" }, values:  { category: "cement" } }
+  - { scope: { path: "materials/concrete-additives" }, values:  { category: "concrete-additives" } }
+
+  - { scope: { path: "manage/safety" }, values:  { category: "safety" } }
+  - { scope: { path: "manage/policy" }, values:  { category: "policy" } }
+  - { scope: { path: "manage/strategy" }, values:  { category: "strategy" } }
+  - { scope: { path: "manage/pavement-management-systems" }, values:  { category: "pavement-management-systems" } }
+  - { scope: { path: "manage/specifications" }, values:  { category: "specifications" } }
+  - { scope: { path: "manage/tests" }, values:  { category: "tests" } }
+  - { scope: { path: "manage/quality-control-assurance" }, values:  { category: "quality-control-assurance" } }
+  - { scope: { path: "manage/research" }, values:  { category: "research" } }
+  - { scope: { path: "manage/life-cycle-cost-analysis" }, values:  { category: "life-cycle-cost-analysis" } }
+  - { scope: { path: "manage/data-management" }, values:  { category: "data-management" } }
+  - { scope: { path: "manage/training" }, values:  { category: "training" } }

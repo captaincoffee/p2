@@ -1,0 +1,45 @@
+---
+layout: page
+title: P2 News
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+
+  <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <p class="post-meta">{{ post.date | date_to_string }}</p>
+      {{ post.excerpt }}
+    <a href="{{ site.baseurl }}{{ post.url }}">Read more {{ post.title }}</a>
+
+    {% unless forloop.last %}
+    <hr>
+    {% endunless %}
+
+{% endfor %}
+
+<br><br>
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<nav>
+    <ul class="pagination">
+        {% if paginator.previous_page %}
+            <li class="arrow"><a href="{{ site.baseurl }}{{ paginator.previous_page_path | replace: '/index.html', '' }}">&laquo;</a></li>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <li class="current"><a>{{ page }}</a></li>
+            {% elsif page == 1 %}
+                <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: '/page:num', '' }}">{{ page }}</a></li>
+            {% else %}
+                <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <li class="arrow"><a href="{{ site.baseurl }}{{ paginator.next_page_path }}">&raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
