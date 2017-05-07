@@ -8,14 +8,16 @@ header {
 
 article, aside {
   font-size: 1.125em;
-	margin: 2.5rem 0 0 0;
+	padding: 2rem 0 0 0;
+
+	// @media only screen and (min-width: 40em) {
+	// 	margin: 0 1em;
+  // }
 }
 
 .button {
 	font-weight: 700;
 }
-
-// Main Navigation Menu.
 
 $menu-background: $white;
 
@@ -27,19 +29,6 @@ $menu-background: $white;
   background: $menu-background;
 	padding: 0;
 
-  ul {
-    background: $menu-background;
-
-    li {
-      background: $menu-background;
-// Top bar menu text color ********************
-        a {
-          color: $primary-color;
-
-      	}
-    }
-  }
-}
 
 // Site Name on Small Screens
 .title-bar-title {
@@ -63,6 +52,7 @@ $menu-background: $white;
 	padding: 0 0.6em 0 0.7em;
 }
 
+
 .menu-text {
   // color: #fff;
 
@@ -71,23 +61,13 @@ $menu-background: $white;
   }
 }
 
-// Page Title & Meta
-
-$accent-color: #455a64;
-
-.ptitle {
-  background-color: $accent-color;
-  color: white;
-  padding: 1rem 1rem 1.5rem 1rem;
-}
-
 h1 {
-	padding-top: 2rem;
+	padding-top: 2.5rem;
 	text-align: center;
 }
 
 .post-meta {
-  text-align: center;
+	text-align: center;
   font-size: .875rem;
   font-weight: bold;
   padding: 1rem 0 0 0;
@@ -96,6 +76,9 @@ h1 {
 .breadcrumbs {
 	list-style: none;
 	margin: .5em .5em .5em 0;
+
+  // @media only screen and (min-width: 40em) {
+  //   margin: 0 1em;	}
 }
 
 .front_post_list li{
@@ -108,7 +91,6 @@ iframe {
 }
 
 // Tabs
-
 .tabs {
   margin: 1rem 0 0 0;
 }
@@ -167,7 +149,7 @@ code {
 }
 
 footer {
-	background-color: $accent-color;
+	background-color: #455a64;
 	color: #eee;
 	padding: 0 0 2em 0;
 	width: 100%;
@@ -188,65 +170,8 @@ footer a{
 	//.fi-*:before { content: "\f133"; width: 2.75rem;}
 
 
-// Navigation ***************************************
-// .top-bar-right ul a {
-  //  border-bottom: 4px solid transparent;
-  //  background-color: $primary-color;
-  //  color: $white;
-// }
-
-.top-bar-right ul a.current {
-    background-color: $primary-color;
-    color: #fff;
-    font-weight: bold;
-
-	 @media only screen and (max-width: 40em) {
-		 border-bottom: none;
-	 }
-}
-
-.top-bar-right .is-dropdown-submenu a.current {
-   border-bottom: none;
-}
-
-.menu>li:not(.menu-text)>a {
-		padding: 1em .5em .25em .5em;
-
-		@media only screen and (max-width: 40em) {
-			padding: 1em .5em .25em 1em;
-	  }
-}
-
-.dropdown.menu .submenu {
-  border: 1px solid $primary-color;
-}
-
-.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow>a::after {
-  border-color: $primary-color transparent transparent;
-}
-
-.is-drilldown-submenu-parent>a::after {
-  border-color: transparent transparent transparent $primary-color;
-}
-
-.js-drilldown-back::before {
-  border-color: transparent $primary-color transparent transparent;
-}
-
-.js-drilldown-back {
-	font-weight: 700;
-	color: $primary-color;
-}
-
-.is-drilldown li {
-  border-top: 1px solid #4e4e4e;
-  max-width: 400px;
-}
-
-.is-drilldown-submenu-item {
-  padding-left: 1rem;
-}
-
-.is-drilldown li:first-child {
-  border-top: none;
+.ptitle {
+  background-color: #455a64;
+  color: white;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
