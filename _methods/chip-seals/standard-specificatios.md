@@ -1,0 +1,86 @@
+---
+title: Standard Specifications
+author:
+date: 2018-05-06
+date_published:
+source:
+tags: [specifications, DOT, USA, Canada]
+type: link
+image_path: /assets/img/placeholder.jpg
+image_source:
+image_caption:
+title_color:
+video_embed:
+---
+Standard Specifications used in US State DOTs and Canadian Provinces.
+<!--more-->
+
+<h3>United States</h3>
+  <ul>
+    <li><a href="https://www.dot.state.al.us/conweb/specifications.html">Alabama</a></li>
+    <li><a href="http://www.dot.alaska.gov/stwddes/dcsspecs/index.shtml">Alaska</a></li>
+    <li><a href="https://azdot.gov/business/standards-and-guidelines/standards">Arizona</a></li>
+    <li><a href="https://www.arkansashighways.com/standard_specifications.aspx">Arkansas</a></li>
+    <li><a href="http://www.dot.ca.gov/des/oe/construction-contract-standards.html">California</a></li>
+    <li><a href="http://www.coloradodot.info/business/designsupport/construction-specifications">Colorado</a></li>
+    <li><a href="http://www.ct.gov/dot/cwp/view.asp?a=3609&q=430362">Connecticut</a></li>
+    <li><a href="https://deldot.gov/Publications/manuals/standard_specifications/index.shtml">Delaware</a></li>
+    <li><a href="https://ddot.dc.gov/page/standard-specifications-highways-and-structures">District of Columbia</a></li>
+    <li><a href="http://www.fdot.gov/programmanagement/Implemented/SpecBooks/default.shtm">Florida</a></li>
+    <li><a href="http://www.dot.ga.gov/PartnerSmart/Business/Source">Georgia</a></li>
+    <li><a href="http://hidot.hawaii.gov/highways/s2005-standard-specifications/2005-standard-specifications/">Hawaii</a></li>
+    <li><a href="http://apps.itd.idaho.gov/apps/manuals/manualsonline.html">Idaho</a></li>
+    <li><a href="http://www.idot.illinois.gov/doing-business/procurements/engineering-architectural-professional-services/Consultants-Resources/index">Illinois</a></li>
+    <li><a href="http://www.in.gov/dot/div/contracts/standards/book/index.html">Indiana</a></li>
+    <li><a href="https://iowadot.gov/erl/archives1/archives.html">Iowa</a></li>
+    <li><a href="http://www.ksdot.org/burConsMain/specprov/specifications.asp">Kansas</a></li>
+    <li><a href="http://transportation.ky.gov/Construction/Pages/Kentucky-Standard-Specifications.aspx">Kentucky</a></li>
+    <li><a href="http://wwwsp.dotd.la.gov/Inside_LaDOTD/Divisions/Engineering/Standard_Specifications/Pages/Standard%20Specifications.aspx">Louisiana</a></li>
+    <li><a href="http://www.maine.gov/mdot/contractors/publications/standardspec/">Maine</a></li>
+    <li><a href="http://www.roads.maryland.gov/pages/sscm.aspx?PageId=853&lid=SSP">Maryland</a></li>
+    <li><a href="https://www.mass.gov/lists/construction-specifications">Massachusetts</a></li>
+    <li><a href="https://www.michigan.gov/mdot/0,4616,7-151-9622_11044_11357---,00.html">Michigan</a></li>
+    <li><a href="http://www.dot.state.mn.us/pre-letting/spec/index.html">Minnesota</a></li>
+    <li><a href="http://mdot.ms.gov/portal/construction.aspx">Mississippi</a></li>
+    <li><a href="http://www.modot.mo.gov/business/standards_and_specs/highwayspecs.htm">Missouri</a></li>
+    <li><a href="http://www.mdt.mt.gov/business/contracting/standard_specs.shtml">Montana</a></li>
+    <li><a href="https://dot.nebraska.gov/media/10343/2017-specbook.pdf">Nebraska</a></li>
+    <li><a href="https://www.nevadadot.com/doing-business/contractors-construction/contract-services/standard-specifications-and-plans">Nevada</a></li>
+    <li><a href="http://www.nh.gov/dot/org/projectdevelopment/highwaydesign/specifications/index.htm">New Hampshire</a></li>
+    <li><a href="http://www.state.nj.us/transportation/eng/specs/2007/Division.shtml">New Jersey</a></li>
+    <li><a href="http://dot.state.nm.us/content/nmdot/en/Standards.html">New Mexico</a></li>
+    <li><a href="https://www.dot.ny.gov/main/business-center/engineering/specifications">New York</a></li>
+    <li><a href="https://connect.ncdot.gov/resources/Specifications/Pages/2012StandSpecsMan.aspx?Order=SM-00-000">North Carolina</a></li>
+    <li><a href="http://www.dot.nd.gov/dotnet/supplspecs/standardspecs.aspx">North Dakota</a></li>
+    <li><a href="http://www.dot.state.oh.us/Divisions/ConstructionMgt/OnlineDocs/Pages/2016-Online-Spec-Book.aspx">Ohio</a></li>
+    <li><a href="https://ok.gov/odot/Doing_Business/Construction/Construction_Engineering_-_Standards,_Specifications,_Materials_and_Testing/index.html">Oklahoma</a></li>
+    <li><a href="http://www.oregon.gov/ODOT/Business/Pages/Standard_Specifications.aspx">Oregon</a></li>
+    <li><a href="http://www.dot.state.pa.us/public/PubsForms/Publications/Pub_408/408_2016/408_2016.pdf">Pennsylvania</a></li>
+    <li><a href="http://www.dtop.gov.pr/carretera/det_content.asp?cn_id=271">Puerto Rico</a></li>
+    <li><a href="http://www.dot.ri.gov/business/bluebook.php">Rhode Island</a></li>
+    <li><a href="http://www.scdot.org/business/standard-specifications.aspx">South Carolina</a></li>
+    <li><a href="http://www.sddot.com/business/contractors/specs/2015specbook/Default.aspx">South Dakota</a></li>
+    <li><a href="https://www.tn.gov/tdot/tdot-construction-division/transportation-construction-division-resources/transportation-construction-2015-standard-specifications.html">Tennessee</a></li>
+    <li><a href="https://www.txdot.gov/business/resources/txdot-specifications.html">Texas</a></li>
+    <li><a href="http://www.udot.utah.gov/main/f?p=100:pg:885740181684789::::V,T:,302">Utah</a></li>
+    <li><a href="http://vtrans.vermont.gov/highway/construct-material/construct-services/pre-contractspecifications/2018">Vermont</a></li>
+    <li><a href="http://www.virginiadot.org/business/const/spec-default.asp">Virginia</a></li>
+    <li><a href="http://www.wsdot.wa.gov/Publications/Manuals/M41-10.htm">Washington</a></li>
+    <li><a href="https://transportation.wv.gov/highways/engineering/Pages/Specifications.aspx">West Virginia</a></li>
+    <li><a href="http://roadwaystandards.dot.wi.gov/standards/stndspec/index.htm">Wisconsin</a></li>
+    <li><a href="http://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/2010_Standard_Specifications.html">Wyoming</a></li>
+  </ul>
+<h3>Canada</h3>
+  <ul>
+    <li><a href="http://www.transportation.alberta.ca/705.htm">Alberta</a></li>
+    <li><a href="https://www2.gov.bc.ca/gov/content/transportation/transportation-infrastructure/engineering-standards-guidelines/standard-specifications-for-highway-construction">British Columbia</a></li>
+    <li><a href="http://www.gov.mb.ca/mit/contracts/manualarchive.html">Manitoba</a></li>
+    <li><a href="http://www2.gnb.ca/content/dam/gnb/Departments/trans/pdf/en/Publications/2015_Standard_Specs-e.pdf">New Brunswick</a></li>
+    <li><a href="http://www.tw.gov.nl.ca/publications/specbook2011.pdf">Newfoundland and Labrador</a></li>
+    <li><a href="http://www.tw.gov.nl.ca/publications/specbook2011.pdf">Northwest Territories</a></li>
+    <li><a href="http://www.gov.ns.ca/tran/publications/standard.pdf">Nova Scotia</a></li>
+    <li><a href="http://www.raqsb.mto.gov.on.ca/techpubs/ops.nsf/OPSHomepage">Ontario</a></li>
+    <li><a href="https://www.princeedwardisland.ca/sites/default/files/publications/provisions_contract_specifications_highway_construction.pdf">Prince Edward Island</a></li>
+    <li><a href="http://www.tw.gov.nl.ca/publications/specbook2011.pdf">Quebec</a></li>
+    <li><a href="http://www.highways.gov.sk.ca/Doing%20Business%20with%20MHI/ministry%20manuals/Standard%20Specifications%20Manual/Portfolio%20Complete%20Manual/Standard%20Specifications%20Manual%20(Feb%202017).pdf">Saskatchewan</a></li>
+  </ul>
