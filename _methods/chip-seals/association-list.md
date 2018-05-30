@@ -40,16 +40,15 @@ Listing of Associations related to Pavement Preservation.
     <li><a href="https://sites.google.com/site/trbcommitteeafd60">Committee on Flexible Pavement Design (AFD60)</a></li>
     <li><a href="https://sites.google.com/site/trbcommitteeafd70">Committee on Pavement Rehabilitation (AFD70)</a></li>
     <li><a href="http://sites.google.com/site/trbcommitteeafh10">Committee on Construction Management (AFH10)</a></li>
-    <li><a href="http://sites.google.com/site/trbcommitteeafh50">Committee on Portland Cement Concrete Pavement Construction (AFH50)</a></li>
     <li><a href="http://www.trb.org/AFH60/AFH60.aspx">Committee on Asphalt Pavement Construction and Rehabilitation (AFH60)</a></li>
     <li><a href="http://sites.google.com/site/trbcommitteeahd00">Section – Maintenance and Preservation (AHD00)</a></li>
     <li><a href="http://sites.google.com/site/trbcommitteeahd10">Committee on Maintenance and Operations Management (AHD10)</a></li>
     <li><a href="https://sites.google.com/site/trbcommitteeahd18">Committee on Pavement Preservation (AHD18)</a></li>
     <li><a href="https://sites.google.com/site/trbahd20">Committee on Pavement Maintenance (AHD20)</a></li>
   </ul>
-<h2>Other</h2>
+
+<h2>National &amp; International Groups</h2>
   <ul>
-    <li><a href="http://www.alasphalt.com/">Alabama Asphalt Pavement Association (AAPA)</a>
     <li><a href="http://www.concrete.org/general/home.asp">American Concrete Institute (ACI)</a></li>
     <li><a href="http://www.pavement.com/">American Concrete Pavement Association (ACPA)</a></li>
     <li><a href="http://www.highways.org/">American Highway Users Alliance (AHUA)</a></li>
@@ -57,31 +56,13 @@ Listing of Associations related to Pavement Preservation.
     <li><a href="http://www.artba.org/">American Road &amp; Transportation Builders Association (ARTBA)</a></li>
     <li><a href="http://www.astm.org/">American Society for the Testing of Materials (ASTM)</a></li>
     <li><a href="http://www.highwayengineers.org/">American Society of Highway Engineers (ASHE)</a></li>
-    <li><a href="http://www.arasphalt.com/">Arkansas Asphalt Pavement Association</a></li>
-    <li><a href="http://www.acaf.org/">Asphalt Contractors Association of Florida</a></li>
     <li><a href="http://www.aema.org/">Asphalt Emulsion Manufacturers Association (AEMA)</a></li>
     <li><a href="http://www.asphaltinstitute.org/">Asphalt Institute (AI)</a></li>
     <li><a href="http://www.aia-us.org/">Asphalt Interlayer Association (AIA)</a></li>
-    <li><a href="https://asphaltindiana.org/">Asphalt Pavement Association of Indiana (APAI)</a></li>
-    <li><a href="http://www.apa-mi.org/">Asphalt Pavement Association of Michigan (APAM)</a></li>
-    <li><a href="http://www.apao.org/">Asphalt Pavement Association of Oregon</a></li>
-    <li><a href="http://www.asphaltwv.com/">Asphalt Pavement Association of West Virginia</a></li>
-    <li><a href="http://www.apai.net/">Asphalt Paving Association of Iowa (APAI)</a></li>
     <li><a href="http://www.arra.org/">Asphalt Recycling &amp; Reclamation Association (ARRA)</a></li>
     <li><a href="http://www.asphalttechnology.org/">Association of Asphalt Paving Technologists (AAPT)</a></li>
-    <li><a href="http://www.calapa.net/">California Asphalt Pavement Association (CalAPA)</a></li>
-    <li><a href="http://www.carolinaasphalt.org/">Carolina Asphalt Pavement Association (CAPA)</a></li>
-    <li><a href="http://www.ccpihawaii.org/">Cement and Concrete Products Industry of Hawaii</a></li>
-    <li><a href="http://www.co-asphalt.com/">Colorado Asphalt Pavement Association</a></li>
-    <li><a href="http://www.concreteisbetter.com/">Concrete Paving Association of Minnesota</a></li>
     <li><a href="http://www.crsi.org/">Concrete Reinforcing Steel Institute (CRSI)</a></li>
-    <li><a href="http://www.dakota-asphalt.org/">Dakota Asphalt Pavement Association</a></li>
-    <li><a href="http://www.fcpa.org/">Florida Concrete &amp; Products Association (FCPA)</a></li>
     <li><a href="http://www.fp2.org/">FP2, Inc. (Foundation for Pavement Preservation)</a></li>
-    <li><a href="http://www.gaconcrete.org/">Georgia Ready Mixed Concrete Association (GRMCA)</a></li>
-    <li><a href="http://www.il-asphalt.org/">Illinois Asphalt Pavement Association</a></li>
-    <li><a href="http://www.ilppma.com/">Illinois Pavement Preservation &amp; Maintenance Association (ILPPMA)</a></li>
-    <li><a href="http://www.irmca.com/">Indiana Ready Mixed Concrete Association (IRMCA)</a></li>
     <li><a href="http://www.ifai.com/">Industrial Fabrics Association International</a></li>
     <li><a href="http://www.ite.org/">Institute of Transportation Engineers (ITE)</a></li>
     <li><a href="http://www.icoste.org/">International Cost Engineering Council (ICEC)</a></li>
@@ -89,36 +70,66 @@ Listing of Associations related to Pavement Preservation.
     <li><a href="http://www.iprf.org/">Innovative Pavement Research Foundation (IPRF)</a></li>
     <li><a href="http://www.slurry.org/">International Slurry Surfacing Association (ISSA)</a></li>
     <li><a href="http://www.asphalt.org/">International Society for Asphalt Pavements</a></li>
-    <li><a href="http://ladany.org/">Liquid Asphalt Distributors Association of New York (LADA)</a></li>
-    <li><a href="http://www.lahotmix.org">Louisiana Asphalt Pavement Association</a></li>
     <li><a href="http://www.mainsupt.com/">Maintenance Superintendents Association (MSA)</a></li>
-    <li><a href="http://www.mdasphalt.org/">Maryland Asphalt Association</a></li>
-    <li><a href="http://www.miconcrete.org/">Michigan Concrete Association (MCA)</a></li>
-    <li><a href="http://www.mi-ita.com/">Michigan Infrastructure &amp; Transportation Association (MITA)</a></li>
-    <li><a href="http://www.m-rpa.org/">Michigan Road Preservation Association (MRPA)</a></li>
-    <li><a href="http://www.asphaltisbest.com/">Minnesota Asphalt Pavement Association</a></li>
-    <li><a href="http://www.superpave.com/">Mississippi Asphalt Pavement Association (MAPA)</a></li>
-    <li><a href="http://www.mississippiconcrete.com/">Mississippi Concrete Industries Association (MCIA)</a></li>
-    <li><a href="http://www.moasphalt.org/">Missouri Asphalt Pavement Association</a></li>
     <li><a href="http://www.hotmix.org/">National Asphalt Pavement Association (NAPA)</a></li>
     <li><a href="http://www.countyengineers.org/">National Association of County Engineers (NACE)</a></li>
     <li><a href="http://www.naco.org/">National Association of Counties</a></li>
     <li><a href="http://www.nlc.org/">National League of Cities (NLC)</a></li>
     <li><a href="http://www.nltapa.org/">National Local Technical Assistance Program Association</a></li>
     <li><a href="http://www.nrmca.org/">National Ready Mixed Concrete Association (NRMCA)</a></li>
-    <li><a href="http://www.nebrconc.org/">Nebraska Concrete Paving Association</a></li>
+    <li><a href="http://www.cement.org/">Portland Cement Association (PCA)</a></li>
+    <li><a href="http://www.tripnet.org/">The Road Information Program (TRIP)</a></li>
+    <li><a href="http://www.rubberpavements.org/">Rubber Pavements Association (RPA)</a></li>
+  </ul>
+
+<h2>State &amp; Regional Asphalt Associations</h2>
+  <ul>
+    <li><a href="http://www.alasphalt.com/">Alabama Asphalt Pavement Association (AAPA)</a></li>
+    <li><a href="http://www.arasphalt.com/">Arkansas Asphalt Pavement Association</a></li>
+    <li><a href="http://www.acaf.org/">Asphalt Contractors Association of Florida</a></li>
+    <li><a href="https://asphaltindiana.org/">Asphalt Pavement Association of Indiana (APAI)</a></li>
+    <li><a href="http://www.apa-mi.org/">Asphalt Pavement Association of Michigan (APAM)</a></li>
+    <li><a href="http://www.apao.org/">Asphalt Pavement Association of Oregon</a></li>
+    <li><a href="http://www.asphaltwv.com/">Asphalt Pavement Association of West Virginia</a></li>
+    <li><a href="http://www.apai.net/">Asphalt Paving Association of Iowa (APAI)</a></li>
+    <li><a href="http://www.calapa.net/">California Asphalt Pavement Association (CalAPA)</a></li>
+    <li><a href="http://www.carolinaasphalt.org/">Carolina Asphalt Pavement Association (CAPA)</a></li>
+    <li><a href="http://www.co-asphalt.com/">Colorado Asphalt Pavement Association</a></li>
+    <li><a href="http://www.dakota-asphalt.org/">Dakota Asphalt Pavement Association</a></li>
+    <li><a href="http://www.il-asphalt.org/">Illinois Asphalt Pavement Association</a></li>
+    <li><a href="http://www.ilppma.com/">Illinois Pavement Preservation &amp; Maintenance Association (ILPPMA)</a></li>
+    <li><a href="http://ladany.org/">Liquid Asphalt Distributors Association of New York (LADA)</a></li>
+    <li><a href="http://www.lahotmix.org">Louisiana Asphalt Pavement Association</a></li>
+    <li><a href="http://www.mdasphalt.org/">Maryland Asphalt Association</a></li>
+    <li><a href="http://www.mi-ita.com/">Michigan Infrastructure &amp; Transportation Association (MITA)</a></li>
+    <li><a href="http://www.m-rpa.org/">Michigan Road Preservation Association (MRPA)</a></li>
+    <li><a href="http://www.asphaltisbest.com/">Minnesota Asphalt Pavement Association</a></li>
+    <li><a href="http://www.superpave.com/">Mississippi Asphalt Pavement Association (MAPA)</a></li>
+    <li><a href="http://www.moasphalt.org/">Missouri Asphalt Pavement Association</a></li>
     <li><a href="http://www.njapa.com/">New Jersey Asphalt Pavement Association</a></li>
     <li><a href="http://www.nymaterials.com/">New York Construction Materials Association</a></li>
     <li><a href="http://www.pa-asphalt.org/">Pennsylvania Asphalt Pavement Association (PAPA)</a></li>
     <li><a href="http://paama.org/">Pennsylvania Association of Asphalt Material Applicators (PAAMA)</a></li>
-    <li><a href="http://www.pa.pavement.com/">Pennsylvania Chapter: American Concrete Pavement Association</a></li>
     <li><a href="http://www.paiky.org/">Plantmix Asphalt Industry of Kentucky</a></li>
-    <li><a href="http://www.cement.org/">Portland Cement Association (PCA)</a></li>
-    <li><a href="http://www.tripnet.org/">The Road Information Program (TRIP)</a></li>
-    <li><a href="http://www.rubberpavements.org/">Rubber Pavements Association (RPA)</a></li>
-    <li><a href="http://www.tnconcrete.org/">Tennessee Concrete Association (TCA)</a></li>
     <li><a href="http://www.txhotmix.org/">Texas Asphalt Pavement Association</a></li>
-    <li><a href="http://www.vrmca.com/">Virginia Ready-Mixed Concrete Association (VRMCA)</a></li>
-    <li><a href="http://www.washingtonconcrete.org/">Washington Aggregates and Concrete Association (WACA)</a></li>
     <li><a href="http://asphaltwa.com/">Washington Asphalt Pavement Association (WAPA)</a></li>
+    <li><a href="https://wrapp.org/">Western Regional Association for Pavement Preservation (WRAPP)</a></li>
     <li><a href="http://www.wispave.org/">Wisconsin Asphalt Pavement Association</a></li>
+  </ul>
+
+<h2>State &amp; Regional Cement Associations</h2>
+  <ul>
+      <li><a href="http://www.ccpihawaii.org/">Cement and Concrete Products Industry of Hawaii</a></li>
+      <li><a href="http://www.concreteisbetter.com/">Concrete Paving Association of Minnesota</a></li>
+      <li><a href="http://www.fcpa.org/">Florida Concrete &amp; Products Association (FCPA)</a></li>
+      <li><a href="http://www.gaconcrete.org/">Georgia Ready Mixed Concrete Association (GRMCA)</a></li>
+      <li><a href="http://www.irmca.com/">Indiana Ready Mixed Concrete Association (IRMCA)</a></li>
+      <li><a href="http://www.miconcrete.org/">Michigan Concrete Association (MCA)</a></li>
+      <li><a href="http://www.mississippiconcrete.com/">Mississippi Concrete Industries Association (MCIA)</a></li>
+      <li><a href="http://www.nebrconc.org/">Nebraska Concrete Paving Association</a></li>
+      <li><a href="http://www.pa.pavement.com/">Pennsylvania Chapter: American Concrete Pavement Association</a></li>
+      <li><a href="http://www.tnconcrete.org/">Tennessee Concrete Association (TCA)</a></li>
+      <li><a href="http://www.vrmca.com/">Virginia Ready-Mixed Concrete Association (VRMCA)</a></li>
+      <li><a href="http://www.washingtonconcrete.org/">Washington Aggregates and Concrete Association (WACA)</a></li>
+
+  </ul>
