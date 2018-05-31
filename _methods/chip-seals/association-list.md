@@ -43,7 +43,7 @@ Listing of Associations related to Pavement Preservation.
     <li><a href="http://www.highways.org/">American Highway Users Alliance (AHUA)</a></li>
     <li><a href="http://www.apwa.net/">American Public Works Association (APWA)</a></li>
     <li><a href="http://www.artba.org/">American Road &amp; Transportation Builders Association (ARTBA)</a></li>
-    <li><a href="http://www.astm.org/">American Society for the Testing of Materials (ASTM)</a></li>
+    <li><a href="http://www.astm.org/">ASTM International (ASTM)</a></li>
     <li><a href="http://www.highwayengineers.org/">American Society of Highway Engineers (ASHE)</a></li>
     <li><a href="http://www.aema.org/">Asphalt Emulsion Manufacturers Association (AEMA)</a></li>
     <li><a href="http://www.asphaltinstitute.org/">Asphalt Institute (AI)</a></li>
