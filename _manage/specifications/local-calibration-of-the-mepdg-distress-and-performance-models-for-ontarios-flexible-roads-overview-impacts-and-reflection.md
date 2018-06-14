@@ -3,7 +3,7 @@ title: Local Calibration of the MEPDG Distress and Performance Models for Ontari
 author: Xian-Xun Yuan, Iliya Nemtsov
 date: 2018-06-11
 date_published: 2018-05-07
-source: TRR
+source: Transportation Research Record
 tags: [calibration, distress, performance, models, mix design, MEPDG]
 type: research
 image_path: /assets/img/placeholder.jpg

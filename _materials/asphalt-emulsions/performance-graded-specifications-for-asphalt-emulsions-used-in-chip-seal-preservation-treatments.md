@@ -3,7 +3,7 @@ title: Performance-Graded Specifications for Asphalt Emulsions Used in Chip Seal
 author: Javon Adams, Mohammad Ilias, Cassie Castorena, Y. Richard Kim
 date: 2018-06-11
 date_published: 2018-05-15
-source: TRR
+source: Transportation Research Record
 tags: [asphalt emulsion, emulsion performance-grade, chip seals, spray seals, specifications]
 type: research
 image_path: /assets/img/placeholder.jpg

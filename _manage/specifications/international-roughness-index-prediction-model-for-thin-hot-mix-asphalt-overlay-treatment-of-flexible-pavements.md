@@ -3,7 +3,7 @@ title: International Roughness Index Prediction Model for Thin Hot Mix Asphalt O
 author: Jinsong Qian, Chen Jin, Jiake Zhang, Jianming Ling, Chao Sun
 date: 2018-06-11
 date_published: 2018-04-07
-source: TRR
+source: Transportation Research Record
 tags: [IRI, prediction, thin overlays, LTPP, climate]
 type: research
 image_path: /assets/img/placeholder.jpg

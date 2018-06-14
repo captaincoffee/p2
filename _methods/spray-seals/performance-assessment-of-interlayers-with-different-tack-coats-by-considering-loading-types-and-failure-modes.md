@@ -3,7 +3,7 @@ title: Performance Assessment of Interlayers with Different Tack Coats by Consid
 author: Soroosh Amelian, Yong-Rak Kim
 date: 2018-06-11
 date_published: 2018-04-07
-source: TRR
+source: Transportation Research Record
 tags: [tack coats, bond strength, IDT, DST]
 type: research
 image_path: /assets/img/placeholder.jpg

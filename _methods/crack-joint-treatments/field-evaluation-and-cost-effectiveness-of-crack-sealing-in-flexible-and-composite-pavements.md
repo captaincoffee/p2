@@ -3,7 +3,7 @@ title: Field Evaluation and Cost Effectiveness of Crack Sealing in Flexible and 
 author: Momen Mousa, Mostafa A. Elseifi, Mohammad Bashar, Zhongjie Zhang, Kevin Gaspard
 date: 2018-06-11
 date_published: 2018-04-24
-source: TRR
+source: Transportation Research Record
 tags: [crack treatments]
 type: research
 image_path: /assets/img/placeholder.jpg

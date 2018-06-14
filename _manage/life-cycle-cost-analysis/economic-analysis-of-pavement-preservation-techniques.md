@@ -4,7 +4,7 @@ author: Natalia Zuniga-Garcia, Wilfrido Martinez-Alonso, Andre de Fortier Smit, 
 
 date: 2018-06-11
 date_published: 2018-05-07
-source: TRR
+source: Transportation Research Record
 tags: [economic analysis, microsurfacing, chip seals, thin overlays, Texas]
 type: research
 image_path: /assets/img/placeholder.jpg

@@ -3,7 +3,7 @@ title: Wearing Course Mixtures Prepared with High Reclaimed Asphalt Pavement Con
 author: Stephan Büchler, Augusto Cannone Falchetto, Axel Walther, Chiara Riccardi, Di Wang, Michael P. Wistuba
 date: 2018-06-11
 date_published: 2018-05-14
-source: TRR
+source: Transportation Research Record
 tags: [asphalt, rejuvenators, RAP, tests, wearing course, BTSV]
 type: research
 image_path: /assets/img/placeholder.jpg

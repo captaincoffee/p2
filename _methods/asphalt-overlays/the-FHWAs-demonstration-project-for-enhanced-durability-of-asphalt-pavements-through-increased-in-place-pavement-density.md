@@ -3,7 +3,7 @@ title: The FHWA’s Demonstration Project for Enhanced Durability of Asphalt Pav
 author: Tim Aschenbrener, E. Ray Brown, Nam Tran, Phillip B. Blankenship
 date: 2018-06-11
 date_published: 2018-04-24
-source: TRR
+source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118767419
 tags: [field density, demonstration projects, FHWA, AI, NCAT]
 type: research
