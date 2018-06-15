@@ -7,12 +7,14 @@ source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118768522
 tags: [IRI, prediction, thin overlays, LTPP, climate]
 type: research
-image_path: 
+image_path:
 image_source:
 image_caption:
 title_color:
 video_embed:
 sidebar:
+order-number:
+subtitle:
 lead:
 ---
 The objective of this paper is to develop a post-thin-overlay IRI prediction model using a unified model function form, which can be used for different regions. The influence of thin overlay was characterized by several factors such as structural strength, annual precipitation, etc. An IRI prediction method was proposed based on the analysis of influence factors, and findings from this work can provide the guideline for other performance indictors or treatments.

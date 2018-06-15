@@ -7,12 +7,14 @@ source: AASHTO ReSource
 source-url: http://aashtoresource.org/university/newsletters/newsletters/2016/08/02/not-just-a-box-of-rocks
 tags: [AASHTO, ReSource, proficiency sample, reference sample]
 type: article
-image_path: 
+image_path:
 image_source:
 image_caption:
 title_color:
 video_embed:
 sidebar:
+order-number:
+subtitle:
 lead:
 ---
 An Introduction to the AASHTO re:source Proficiency Sample Program

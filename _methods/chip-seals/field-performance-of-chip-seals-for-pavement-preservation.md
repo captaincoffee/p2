@@ -14,6 +14,7 @@ title_color:
 video_embed:
 sidebar:
 order-number:
+subtitle:
 lead:
 ---
 The objective of this study was to evaluate the field performance of chip seal test sections placed on a low traffic volume road. To accomplish this objective, full-scale test sections were treated with chip seal applications and their performance monitored periodically over a 4.5-year period.

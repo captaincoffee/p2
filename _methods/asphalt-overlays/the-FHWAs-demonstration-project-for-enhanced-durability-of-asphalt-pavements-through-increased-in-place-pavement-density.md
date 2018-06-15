@@ -14,6 +14,7 @@ title_color:
 video_embed:
 sidebar:
 order-number:
+subtitle:
 lead:
 ---
 The overall objective of the demonstration project was to achieve increased in-place density for asphalt pavements. There were two major components of this study, including (1) a literature search to serve as an educational component for the best practices for increasing in-place density; and (2) the construction of 10 field demonstration projects. The field demonstration projects were constructed in 10 states whose participation was selected through an application process. Each of the SHAs and contractors involved in the field demonstration projects were offered a workshop from the Asphalt Institute (AI) and FHWA and on-site assistance during construction from the National Center for Asphalt Technology (NCAT).

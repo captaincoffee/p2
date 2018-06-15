@@ -38,6 +38,7 @@ sidebar:
 
 # To order pages in a tutorial, guide or other
 order-number:
+subtitle:
 
 # Lead paragraph for whatever. Meant to go above a Table of Contents
 lead:

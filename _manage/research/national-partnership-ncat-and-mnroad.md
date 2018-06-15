@@ -7,12 +7,14 @@ source: NCPP
 source-url:
 tags: [research, test track, MPPP, NCPP]
 type: video
-image_path: 
+image_path:
 image_source:
 image_caption:
 title_color:
 video_embed: https://youtu.be/NDAdtY5g7PE
 sidebar:
+order-number:
+subtitle:
 lead:
 ---
 Jerry Geib, Research Operations Engineer, MinnesotaDOT, gives an overview of the NCAT and MnROADS formal partnership. The combination of different climates, material selection and availability, and other factors will advance the understanding of Pavement Preservation.

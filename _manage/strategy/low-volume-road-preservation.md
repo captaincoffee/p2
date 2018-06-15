@@ -7,12 +7,14 @@ source: NCPP
 source-url:
 tags: [FDR, fog seal, crack seal, low volume roads, cold climate, distress identification, MPPP, NCPP]
 type: video
-image_path: 
+image_path:
 image_source:
 image_caption:
 title_color:
 video_embed: https://youtu.be/gDGfADwqjX4
 sidebar:
+order-number:
+subtitle:
 lead:
 ---
 Dale Heglund, PE/PLS, Director, North Dakota LTAP Center presents on the preservation of low volume roads. Special issues include cold climate, varied topography, and sudden influx of industry such as Bakken Oil fields. Methods discussed include FDR, Soil Stabilization, Fog Seals, Chip Seals, Crack Sealing, Patching.

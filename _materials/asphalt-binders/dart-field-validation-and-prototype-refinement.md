@@ -14,6 +14,7 @@ title_color:
 video_embed:
 sidebar:
 order-number:
+subtitle:
 lead:
 ---
 This report summarizes findings from a National Cooperative Highway Research Program (NCHRP) Innovations Deserving Exploratory Analysis (IDEA) Type 2 study to validate a field-ready prototype of the Duomorph Asphalt Rheology Tester (DART) as a low-cost and easy-to-use asphalt binder testing device. The DART is a piezoelectric sensor-based portable testing system that addresses the need of the paving industry to cost effectively monitor the uniformity or specification compliance of asphalt binder samples at various points along its supply chain.

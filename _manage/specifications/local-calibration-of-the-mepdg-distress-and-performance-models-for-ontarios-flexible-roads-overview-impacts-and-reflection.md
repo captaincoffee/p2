@@ -7,12 +7,14 @@ source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118759013
 tags: [calibration, distress, performance, models, mix design, MEPDG]
 type: research
-image_path: 
+image_path:
 image_source:
 image_caption:
 title_color:
 video_embed:
 sidebar:
+order-number:
+subtitle:
 lead:
 ---
 Built upon a seven-year local calibration study of Ontario’s flexible pavements, this paper provides a summary of the calibration results and design impact and, more importantly, shares the experience and lessons learned from the process.

@@ -14,6 +14,7 @@ title_color:
 video_embed:
 sidebar:
 order-number:
+subtitle:
 lead:
 ---
 The primary purpose of this study is to examine the link between various parameters obtained from a monotonic DST and the results of a cyclic loading test, which more realistically assesses the interface performance. Furthermore, to investigate the possible effect of interface failure mode (shear vs. tensile) on the performance assessment of tack coat interlayers, a simple indirect tensile test (IDT) was conducted to determine the tensile behavior of the interlayers.

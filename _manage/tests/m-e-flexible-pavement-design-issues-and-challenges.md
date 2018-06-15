@@ -7,12 +7,14 @@ source: Geo-Institute of ASCE
 source-url:
 tags: [mix design, tests, HMA, ASCE, Monismith Lecture, AASHTO Road Test, MEPDG]
 type: video
-image_path: 
+image_path:
 image_source:
 image_caption:
 title_color:
 video_embed: https://youtu.be/M_vezLCXVi0
 sidebar:
+order-number:
+subtitle:
 lead:
 ---
 

@@ -14,6 +14,7 @@ title_color:
 video_embed:
 sidebar:
 order-number:
+subtitle:
 lead:
 ---
 High Friction Surfacing (HFS) is a specialist, high performance road surface material that is applied as a thin coating. HFS is used at locations where there is a high risk of accidents. This paper discusses the history of HFS in the UK and methods to predict performance.
