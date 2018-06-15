@@ -2,7 +2,7 @@
 title: Predicting the Wear of High Friction Surfacing Aggregate
 author: David Woodward, Shaun Friel
 date: 2017-05-16
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: MDPI
 source-url: http://www.mdpi.com/2079-6412/7/5/71
 tags: [chip seal, aggregate, calcined bauxite, high friction, friction numbers, safety]

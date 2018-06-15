@@ -2,7 +2,7 @@
 title: Field Evaluation and Cost Effectiveness of Crack Sealing in Flexible and Composite Pavements
 author: Momen Mousa, Mostafa A. Elseifi, Mohammad Bashar, Zhongjie Zhang, Kevin Gaspard
 date: 2018-04-24
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118767417
 tags: [crack treatments]

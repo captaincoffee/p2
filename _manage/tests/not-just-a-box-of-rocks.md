@@ -2,7 +2,7 @@
 title: Not Just a Box of Rocks
 author:
 date: 2010-04-01
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: AASHTO ReSource
 source-url: http://aashtoresource.org/university/newsletters/newsletters/2016/08/02/not-just-a-box-of-rocks
 tags: [AASHTO, ReSource, proficiency sample, reference sample]

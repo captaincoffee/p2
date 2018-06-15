@@ -2,7 +2,7 @@
 title: Pavement Preservation at the Local Level
 author:
 date: 2015-11-25
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: NCPP
 source-url:
 tags: [city, pavement survey, PMS, MPPP, NCPP]

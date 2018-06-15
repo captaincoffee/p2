@@ -3,7 +3,7 @@ title: Economic Analysis of Pavement Preservation Techniques
 author: Natalia Zuniga-Garcia, Wilfrido Martinez-Alonso, Andre de Fortier Smit, Feng Hong, Jorge A. Prozzi
 
 date: 2018-05-07
-date_published: 2018-06-15
+date_added_kb: 2018-06-15
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118768515
 tags: [economic analysis, microsurfacing, chip seals, thin overlays, Texas]

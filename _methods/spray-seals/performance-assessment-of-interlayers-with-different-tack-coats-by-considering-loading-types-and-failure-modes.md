@@ -2,7 +2,7 @@
 title: Performance Assessment of Interlayers with Different Tack Coats by Considering Loading Types and Failure Modes
 author: Soroosh Amelian, Yong-Rak Kim
 date: 2018-04-07
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118768528
 tags: [tack coats, bond strength, IDT, DST]

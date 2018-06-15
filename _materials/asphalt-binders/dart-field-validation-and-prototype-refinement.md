@@ -2,7 +2,7 @@
 title: DART Field Validation and Prototype Refinement
 author: Chetana Rao, Matthew Bandyk
 date: 2017-12-01
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: TRB
 source-url: http://onlinepubs.trb.org/onlinepubs/IDEA/FinalReports/Highway/NCHRP193.pdf
 tags: [asphalt, asphalt binder, DART, field test, QC, QA, verification]

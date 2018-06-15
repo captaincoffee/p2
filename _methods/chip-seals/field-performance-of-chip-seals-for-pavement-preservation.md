@@ -2,7 +2,7 @@
 title: Field Performance of Chip Seals for Pavement Preservation
 author: Adriana Vargas-Nordcbeck
 date: 2018-05-04
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118768531
 tags: [Chip Seals, field tests]

@@ -2,7 +2,7 @@
 title: Wearing Course Mixtures Prepared with High Reclaimed Asphalt Pavement Content Modified by Rejuvenators
 author: Stephan Büchler, Augusto Cannone Falchetto, Axel Walther, Chiara Riccardi, Di Wang, Michael P. Wistuba
 date: 2018-05-14
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118773193
 tags: [asphalt, rejuvenators, RAP, tests, wearing course, BTSV]

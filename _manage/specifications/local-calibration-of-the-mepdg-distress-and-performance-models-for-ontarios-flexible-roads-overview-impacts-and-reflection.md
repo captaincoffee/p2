@@ -2,7 +2,7 @@
 title: Local Calibration of the MEPDG Distress and Performance Models for Ontario’s Flexible Roads - Overview, Impacts, and Reflection
 author: Xian-Xun Yuan, Iliya Nemtsov
 date: 2018-05-07
-date_published: 2018-6-10
+date_added_kb: 2018-6-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118759013
 tags: [calibration, distress, performance, models, mix design, MEPDG]

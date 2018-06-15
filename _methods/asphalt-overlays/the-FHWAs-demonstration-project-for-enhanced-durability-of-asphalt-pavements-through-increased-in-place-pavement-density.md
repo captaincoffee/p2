@@ -2,7 +2,7 @@
 title: The FHWA’s Demonstration Project for Enhanced Durability of Asphalt Pavements through Increased In-Place Pavement Density
 author: Tim Aschenbrener, E. Ray Brown, Nam Tran, Phillip B. Blankenship
 date: 2018-04-24
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118767419
 tags: [field density, demonstration projects, FHWA, AI, NCAT]

@@ -2,7 +2,7 @@
 title: When to Broom or Remove Traffic Control Safely on Fresh Emulsified Asphalt Chip Seals
 author: Scott Shuler
 date: 2011-01-01
-date_published: 2018-06-10
+date_added_kb: 2018-06-10
 source: TRB  Volume 2235
 source-url: https://trrjournalonline.trb.org/doi/abs/10.3141/2235-09
 tags: [chip seal, moisture content, sweep test, asphalt emulsion, safety, curing]
