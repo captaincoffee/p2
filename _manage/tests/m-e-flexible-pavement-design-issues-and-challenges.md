@@ -1,16 +1,19 @@
 ---
 title: M-E Flexible Pavement Design - Issues and Challenges
 author: Marshall R. Thompson, Ph.D., P.E
-date: 2018-05-07
-date_published: 2016-02-04
+date: 2016-02-04
+date_published: 2018-06-10
 source: Geo-Institute of ASCE
+source-url:
 tags: [mix design, tests, HMA, ASCE, Monismith Lecture, AASHTO Road Test, MEPDG]
 type: video
-image_path: /assets/img/placeholder.jpg
+image_path: 
 image_source:
 image_caption:
 title_color:
 video_embed: https://youtu.be/M_vezLCXVi0
+sidebar:
+lead:
 ---
 
 Marshall R. Thompson, Ph.D., P.E, Professor Emeritus of Civil Engineering, University of Illinois at Urbana – Champaign, gives the third Carl L. Monismith Lecture in June 2014 in Raleigh, NC sponsored by the ASCE Geo-Institute Pavements Committee.
