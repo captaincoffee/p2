@@ -198,7 +198,7 @@ defaults:
   # default layout for collections articles
   - { scope: { type: "methods" }, values: { layout: "collection" } }
   - { scope: { type: "materials" }, values: { layout: "collection" } }
-  - { scope: { type: "management" }, values: { layout: "collection" } }
+  - { scope: { type: "manage" }, values: { layout: "collection" } }
 
   # assign a default category to any item in a given folder
   - { scope: { path: "_methods/fog-tack-and-spray-seals" }, values:  { category: "fog-tack-and-spray-seals" } }
