@@ -132,21 +132,17 @@ collections:
     isKB: true     # is part of Knowledge base
     name: "Methods" # Print name used in titles, menus, ...
     categories:
-      - { name: "Fog Seals", slug: "fog-seals" }
+      - { name: "Fog, Tack & Spray Seals", slug: "fog-tack-and-spray-seals" }
       - { name: "Chip Seals", slug: "chip-seals" }
-      - { name: "Spray Seals", slug: "spray-seals" }
-      - { name: "Microsurfacing & Slurry", slug: "microsurfacing-and-slurry" }
-      - { name: "Combination Seals", slug: "combination-seals" }
+      - { name: "Microsurfacing, Slurry & Cape Seals", slug: "microsurfacing-slurry-and-cape-seals" }
       - { name: "Cold-Mix Asphalt", slug: "cold-mix-asphalt" }
-      - { name: "Warm-Mix Asphalt", slug: "warm-mix-asphalt" }
-      - { name: "Asphalt Overlays", slug: "asphalt-overlays" }
-      - { name: "Recycling - Plant", slug: "recycling-plant" }
-      - { name: "Recycling - In-Place", slug: "recycling-in-place" }
+      - { name: "Hot and Warm-Mix Asphalt", slug: "hot-and-warm-mix-asphalt" }
+      - { name: "Central Plant Recycling - Plant", slug: "central-plant-recycling" }
+      - { name: "In-Place Recycling", slug: "in-place-recycling" }
       - { name: "Crack & Joint Treatments", slug: "crack-joint-treatments" }
-      - { name: "Concrete Overlays", slug: "concrete-overlays" }
-      - { name: "Concrete Treatment", slug: "concrete-treatment" }
-      - { name: "Patching & Preparation", slug: "patching-preparation" }
+      - { name: "Pothole Patching & Preparation", slug: "pothole-patching-preparation" }
       - { name: "Milling & Grinding", slug: "milling-and-grinding" }
+      - { name: "Concrete Overlays", slug: "concrete-overlays" }
 
   materials:
     output: true
@@ -155,35 +151,25 @@ collections:
     categories:
       - { name: "Aggregates", slug: "aggregates" }
       - { name: "Asphalt Emulsions", slug: "asphalt-emulsions" }
-      - { name: "Modified Emulsions", slug: "modified-emulsions" }
       - { name: "Rejuvenators and Recycling Agents", slug: "rejuvenators-and-recycling-agents" }
       - { name: "Asphalt Binders", slug: "asphalt-binders" }
-      - { name: "Modified Binders", slug: "modified-binders" }
-      - { name: "Asphalt Modification", slug: "asphalt-modification" }
-      - { name: "GTR", slug: "gtr" }
-      - { name: "Polymers", slug: "polymers" }
-      - { name: "Moisture Damage Control", slug: "moisture-damage-control" }
-      - { name: "Asphalt Additives", slug: "asphalt-additives" }
-      - { name: "Mixture Additives", slug: "mixture-additives" }
-      - { name: "Fibers", slug: "fibers" }
+      - { name: "Asphalt Additives & Modifiers", slug: "asphalt-additives-and-modifiers" }
+      - { name: "Mixture Additives & Modifiers", slug: "mixture-additives-and-modifiers" }
       - { name: "RAP", slug: "rap" }
-      - { name: "RAS", slug: "ras" }
-      - { name: "Other Recycled Materials", slug: "other-recycled-materials" }
-      - { name: "Cement", slug: "cement" }
-      - { name: "Concrete Additives", slug: "concrete-additives" }
+      - { name: "RAS, GTR, & Recycled Materials", slug: "ras-gtr-recycled-materials" }
+      - { name: "Concrete", slug: "concrete" }
 
-  manage:
+  management:
     output: true
     isKB: true
-    name: Manage
+    name: Management
     categories:
       - { name: "Safety", slug: "safety" }
-      - { name: "Policy", slug: "policy" }
       - { name: "Strategy", slug: "strategy" }
       - { name: "Pavement Management Systems", slug: "pavement-management-systems" }
-      - { name: "Specifications", slug: "specifications" }
-      - { name: "Tests", slug: "tests" }
+      - { name: "Specifications & Tests", slug: "specifications-and-tests" }
       - { name: "Quality Control & Assurance", slug: "quality-control-assurance" }
+      - { name: "Quick Links", slug: "quick-links" }
       - { name: "Research", slug: "research" }
       - { name: "Life Cycle Cost Analysis", slug: "life-cycle-cost-analysis" }
       - { name: "Data Management", slug: "data-management" }
@@ -199,8 +185,8 @@ articleTypes :
   - { name: "Article", plural: "Articles", slug: "article", icon: "fi-page" }
   - { name: "Video", plural: "Videos", slug: "video", icon: "fi-video" }
   - { name: "Link", plural: "Links", slug: "link", icon: "fi-link" }
-  - { name: "Project report", plural: "Project reports", slug: "project", icon: "fi-page-search" }
-  - { name: "Research Study", plural: "Research studies", slug: "research", icon: "fi-compass" }
+  - { name: "Project", plural: "Projects", slug: "project", icon: "fi-page-search" }
+  - { name: "Research", plural: "Research", slug: "research", icon: "fi-compass" }
 
 ############### DEFAULT CONFIGURATION ####################
 defaults:
@@ -212,50 +198,36 @@ defaults:
   # default layout for collections articles
   - { scope: { type: "methods" }, values: { layout: "collection" } }
   - { scope: { type: "materials" }, values: { layout: "collection" } }
-  - { scope: { type: "manage" }, values: { layout: "collection" } }
+  - { scope: { type: "management" }, values: { layout: "collection" } }
 
   # assign a default category to any item in a given folder
-  - { scope: { path: "_methods/fog-seals" }, values:  { category: "fog-seals" } }
+  - { scope: { path: "_methods/fog-tack-and-spray-seals" }, values:  { category: "fog-tack-and-spray-seals" } }
   - { scope: { path: "_methods/chip-seals" }, values:  { category: "chip-seals" } }
-  - { scope: { path: "_methods/spray-seals" }, values:  { category: "spray-seals" } }
-  - { scope: { path: "_methods/microsurfacing-and-slurry" }, values:  { category: "microsurfacing-and-slurry" } }
-  - { scope: { path: "_methods/combination-seals" }, values:  { category: "combination-seals" } }
+  - { scope: { path: "_methods/microsurfacing-slurry-and-cape-seals" }, values:  { category: "microsurfacing-slurry-and-cape-seals" } }
   - { scope: { path: "_methods/cold-mix-asphalt" }, values:  { category: "cold-mix-asphalt" } }
-  - { scope: { path: "_methods/warm-mix-asphalt" }, values:  { category: "warm-mix-asphalt" } }
-  - { scope: { path: "_methods/asphalt-overlays" }, values:  { category: "asphalt-overlays" } }
-  - { scope: { path: "_methods/recycling-plant" }, values:  { category: "recycling-plant" } }
-  - { scope: { path: "_methods/recycling-in-place" }, values:  { category: "recycling-in-place" } }
+  - { scope: { path: "_methods/hot-and-warm-mix-asphalt" }, values:  { category: "hot-and-warm-mix-asphalt" } }
+  - { scope: { path: "_methods/central-plant-recycling" }, values:  { category: "central-plant-recycling" } }
+  - { scope: { path: "_methods/in-place-recycling" }, values:  { category: "in-place-recycling" } }
   - { scope: { path: "_methods/crack-joint-treatments" }, values:  { category: "crack-joint-treatments" } }
   - { scope: { path: "_methods/concrete-overlays" }, values:  { category: "concrete-overlays" } }
-  - { scope: { path: "_methods/concrete-treatment" }, values:  { category: "concrete-treatment" } }
-  - { scope: { path: "_methods/patching-preparation" }, values:  { category: "patching-preparation" } }
+  - { scope: { path: "_methods/pothole-patching-preparation" }, values:  { category: "pothole-patching-preparation" } }
   - { scope: { path: "_methods/milling-and-grinding" }, values:  { category: "milling-and-grinding" } }
 
   - { scope: { path: "_materials/aggregates" }, values:  { category: "aggregates" } }
   - { scope: { path: "_materials/asphalt-emulsions" }, values:  { category: "asphalt-emulsions" } }
-  - { scope: { path: "_materials/modified-emulsions" }, values:  { category: "modified-emulsions" } }
   - { scope: { path: "_materials/rejuvenators-and-recycling-agents" }, values:  { category: "rejuvenators-and-recycling-agents" } }
   - { scope: { path: "_materials/asphalt-binders" }, values:  { category: "asphalt-binders" } }
-  - { scope: { path: "_materials/modified-binders" }, values:  { category: "modified-binders" } }
-  - { scope: { path: "_materials/asphalt-modification" }, values:  { category: "asphalt-modification" } }
-  - { scope: { path: "_materials/gtr" }, values:  { category: "gtr" } }
-  - { scope: { path: "_materials/polymers" }, values:  { category: "polymers" } }
-  - { scope: { path: "_materials/moisture-damage-control" }, values:  { category: "moisture-damage-control" } }
-  - { scope: { path: "_materials/asphalt-additives" }, values:  { category: "asphalt-additives" } }
-  - { scope: { path: "_materials/mixture-additives" }, values:  { category: "mixture-additives" } }
-  - { scope: { path: "_materials/fibers" }, values:  { category: "fibers" } }
+  - { scope: { path: "_materials/asphalt-additives-and-modifiers" }, values:  { category: "asphalt-additives-and-modifiers" } }
+  - { scope: { path: "_materials/mixture-additives-and-modifiers" }, values:  { category: "mixture-additives-and-modifiers" } }
   - { scope: { path: "_materials/rap" }, values:  { category: "rap" } }
-  - { scope: { path: "_materials/ras" }, values:  { category: "ras" } }
-  - { scope: { path: "_materials/other-recycled-materials" }, values:  { category: "other-recycled-materials" } }
-  - { scope: { path: "_materials/cement" }, values:  { category: "cement" } }
-  - { scope: { path: "_materials/concrete-additives" }, values:  { category: "concrete-additives" } }
+  - { scope: { path: "_materials/ras-gtr-recycled-materials" }, values:  { category: "ras-gtr-recycled-materials" } }
+  - { scope: { path: "_materials/concrete" }, values:  { category: "concrete" } }
 
   - { scope: { path: "_manage/safety" }, values:  { category: "safety" } }
-  - { scope: { path: "_manage/policy" }, values:  { category: "policy" } }
+  - { scope: { path: "_manage/quick-links" }, values:  { category: "quick-links" } }
   - { scope: { path: "_manage/strategy" }, values:  { category: "strategy" } }
   - { scope: { path: "_manage/pavement-management-systems" }, values:  { category: "pavement-management-systems" } }
-  - { scope: { path: "_manage/specifications" }, values:  { category: "specifications" } }
-  - { scope: { path: "_manage/tests" }, values:  { category: "tests" } }
+  - { scope: { path: "_manage/specifications-and-tests" }, values:  { category: "specifications-and-tests" } }
   - { scope: { path: "_manage/quality-control-assurance" }, values:  { category: "quality-control-assurance" } }
   - { scope: { path: "_manage/research" }, values:  { category: "research" } }
   - { scope: { path: "_manage/life-cycle-cost-analysis" }, values:  { category: "life-cycle-cost-analysis" } }
