@@ -159,10 +159,10 @@ collections:
       - { name: "RAS, GTR, & Recycled Materials", slug: "ras-gtr-recycled-materials" }
       - { name: "Concrete", slug: "concrete" }
 
-  management:
+  manage:
     output: true
     isKB: true
-    name: Management
+    name: Manage
     categories:
       - { name: "Safety", slug: "safety" }
       - { name: "Strategy", slug: "strategy" }
