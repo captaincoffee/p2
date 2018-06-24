@@ -5,7 +5,7 @@ date: 2018-04-24
 date_added_kb: 2018-06-10
 source: Transportation Research Record
 source-url: http://journals.sagepub.com/doi/full/10.1177/0361198118767419
-tags: [field density, demonstration projects, FHWA, AI, NCAT]
+tags: [field density, demonstration projects, FHWA, AI, NCAT, hot mix asphalt, HMA]
 type: research
 image_path:
 image_source:
